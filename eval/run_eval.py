@@ -1,12 +1,13 @@
 """隔离数据库启动真实 HTTP 服务；不污染演示数据，不把合成测试当线上指标。"""
-import json,os,sys,time,subprocess,tempfile,socket,urllib.request,urllib.error,statistics
+import json,os,sys,time,subprocess,tempfile,socket,urllib.request,urllib.error,urllib.parse,statistics
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'.runtime'))
 def main():
  with socket.socket() as sock:sock.bind(('127.0.0.1',0));port=sock.getsockname()[1]
  (ROOT/'reports').mkdir(exist_ok=True)
  with tempfile.TemporaryDirectory(prefix='senyu-eval-',dir=ROOT/'reports') as tmp:
-  env=dict(os.environ,APP_PORT=str(port),APP_HOST='127.0.0.1',DB_PATH=str(Path(tmp)/'eval.sqlite3'),APP_MODE='local',ENABLE_LLM='false',TOOLS_TOKEN='eval-tools',ALLOW_FAULT_INJECTION='true',DEMO_CUSTOMER_TOKEN='eval-customer',DEMO_AGENT_TOKEN='eval-agent',DEMO_ADMIN_TOKEN='eval-admin')
+  env=dict(os.environ,APP_PORT=str(port),APP_HOST='127.0.0.1',DB_PATH=str(Path(tmp)/'eval.sqlite3'),APP_MODE='local',SEED_DEMO_QUEUE='false',ENABLE_LLM='false',TOOLS_TOKEN='eval-tools',ALLOW_FAULT_INJECTION='true',DEMO_CUSTOMER_TOKEN='eval-customer',DEMO_CUSTOMER2_TOKEN='eval-customer2',DEMO_CUSTOMER3_TOKEN='eval-customer3',DEMO_AGENT_TOKEN='eval-agent',DEMO_ADMIN_TOKEN='eval-admin')
   logfile=open(Path(tmp)/'server.log','w',encoding='utf-8');proc=subprocess.Popen([sys.executable,str(ROOT/'run.py')],cwd=ROOT,env=env,stdout=logfile,stderr=logfile)
   base=f'http://127.0.0.1:{port}/api'
   def req(path,method='GET',body=None,role='customer',expected=200):
@@ -72,7 +73,7 @@ def main():
    test('连续五轮未解决转人工',unresolved)
    def knowledge():
     k=req('/admin/knowledge',role='admin')[0];old=dict(k);k.update(status='停用',version=k['version']+1);req('/admin/knowledge/'+k['id'],'PUT',k,role='admin')
-    s=req('/sessions','POST');out=req('/sessions/'+s['id']+'/messages','POST',{'text':'空气炸锅容量多大'});assert out['state']=='已转人工'
+    s=req('/sessions','POST');out=req('/sessions/'+s['id']+'/messages','POST',{'text':'AF-35 容量多大'});assert out['state']=='已转人工'
     old['version']=k['version']+1;req('/admin/knowledge/'+k['id'],'PUT',old,role='admin')
    test('知识停用后不参与检索与版本保存',knowledge)
    def threshold():
@@ -85,6 +86,71 @@ def main():
     out=req('/tools/process','POST',{'session_id':s['id'],'text':'查物流','decision':json.dumps(d),'sources':json.dumps(k)},role='tools');assert out['state']=='多订单待选择'
    test('Dify HTTP 工具协议（不等于 Dify 实机执行）',dify_contract)
    test('消费者不能调用 Dify 内部工具',lambda:req('/tools/route','POST',{'text':'查物流'},expected=401))
+   def distinct_orders():
+    oo=req('/me')['orders'];assert len({o['product_id'] for o in oo})==2 and len({o['amount'] for o in oo})==2
+   test('同一用户订单包含不同型号、款式和价格',distinct_orders)
+   def isolated_users():
+    a=req('/sessions','POST');b=req('/sessions','POST',role='customer2');c=req('/sessions','POST',role='customer3')
+    assert (a['user_id'],b['user_id'],c['user_id'])==('u1','u2','u3')
+    assert req('/sessions',role='customer2') and all(s['user_id']=='u2' for s in req('/sessions',role='customer2'))
+    req('/sessions/'+a['id'],role='customer2',expected=403)
+    req('/sessions/'+a['id']+'/messages','POST',{'text':'多少钱'},role='customer2',expected=403)
+    req('/sessions/'+a['id']+'/select','POST',{'order_id':'S20260817001'},role='customer3',expected=403)
+   test('三个用户的会话和订单访问严格隔离',isolated_users)
+   def parallel_users():
+    def check(role):
+     for _ in range(6):
+      uid={'customer':'u1','customer2':'u2','customer3':'u3'}[role];assert req('/me',role=role)['user']['id']==uid
+      assert all(o['user_id']==uid for o in req('/me',role=role)['orders'])
+    with ThreadPoolExecutor(max_workers=3) as pool:list(pool.map(check,['customer','customer2','customer3']))
+   test('并发请求不会串用其他用户身份',parallel_users)
+   def order_price():
+    s=req('/sessions','POST');sid=s['id'];req('/sessions/'+sid+'/select','POST',{'order_id':'S20260818002'})
+    out=req('/sessions/'+sid+'/messages','POST',{'text':'多少钱'});answer=out['messages'][-1]['text'];assert out['intent']=='price' and '469.00' in answer and 'AF-45' in answer
+    out=req('/sessions/'+sid+'/messages','POST',{'text':'上次买的空气炸锅啥时候到'});assert out['intent']=='logistics' and out['state']=='查询成功' and out['order_id']=='S20260818002'
+   test('多少钱关联已选择订单的型号与金额',order_price)
+   def ticket_price():
+    s=req('/sessions','POST');s=req('/sessions/'+s['id']+'/messages','POST',{'text':'S20260817001 帮我催单'});assert s['state']=='工单已创建'
+    s=req('/sessions/'+s['id']+'/messages','POST',{'text':'多少钱'});assert '398.00' in s['messages'][-1]['text']
+   test('工单反馈后价格追问仍保留关联订单',ticket_price)
+   def choose_price():
+    s=req('/sessions','POST');s=req('/sessions/'+s['id']+'/messages','POST',{'text':'多少钱'});assert s['state']=='等待补充信息' and s['messages'][-1]['card']['type']=='products'
+    assert len(s['messages'][-1]['card']['products'])==6
+    s=req('/sessions/'+s['id']+'/product','POST',{'product_id':'TO-20'});assert '269.00' in s['messages'][-1]['text'] and s['product_id']=='TO-20'
+   test('无上下文价格不猜测，选择商品后准确报价',choose_price)
+   def explicit_price():
+    s=req('/sessions','POST');sid=s['id'];req('/sessions/'+sid+'/select','POST',{'order_id':'S20260817001'})
+    s=req('/sessions/'+sid+'/messages','POST',{'text':'AF-55 多少钱'});assert '598.00' in s['messages'][-1]['text'] and 'AF-55' in s['messages'][-1]['text']
+   test('明确新型号优先于旧订单上下文',explicit_price)
+   def unknown_model():
+    s=req('/sessions','POST');sid=s['id'];req('/sessions/'+sid+'/select','POST',{'order_id':'S20260817001'})
+    s=req('/sessions/'+sid+'/messages','POST',{'text':'AF-550 多少钱'});assert s['state']=='等待补充信息' and '没有找到' in s['messages'][-1]['text'] and '398.00' not in s['messages'][-1]['text']
+   test('不存在的型号不误用相似型号或旧订单价格',unknown_model)
+   def model_followup():
+    s=req('/sessions','POST');s=req('/sessions/'+s['id']+'/messages','POST',{'text':'AF-55 容量多大'});assert '5.5L' in s['messages'][-1]['text'] and '3.5L' not in s['messages'][-1]['text']
+    s=req('/sessions/'+s['id']+'/messages','POST',{'text':'多少钱'});assert '598.00' in s['messages'][-1]['text']
+   test('不同型号知识与后续价格不混淆',model_followup)
+   def queue_switch():
+    s=req('/sessions','POST',role='customer2');sid=s['id'];s=req('/sessions/'+sid+'/handoff','POST',{'queue':'售前客服'},role='customer2');assert s['handoff']['user']['id']=='u2'
+    filtered=req('/agent/queue?skill='+urllib.parse.quote('售前客服'),role='agent');assert any(x['id']==sid for x in filtered) and all(x['handoff']['queue']=='售前客服' for x in filtered)
+    s=req('/agent/'+sid+'/assign','POST',{'queue':'物流客服'},role='agent');assert s['handoff']['queue']=='物流客服' and s['handoff']['status']=='待接管'
+    assert all(x['id']!=sid for x in req('/agent/queue?skill='+urllib.parse.quote('售前客服'),role='agent'))
+   test('跨用户技能队列筛选与人工转派',queue_switch)
+   def idempotent_claim():
+    s=req('/sessions','POST',role='customer3');sid=s['id'];req('/sessions/'+sid+'/handoff','POST',{'queue':'订单客服'},role='customer3')
+    one=req('/agent/'+sid+'/claim','POST',role='agent');two=req('/agent/'+sid+'/claim','POST',role='agent');assert len(one['messages'])==len(two['messages']) and sum(m['role']=='agent' for m in two['messages'])==1
+    s=req('/agent/'+sid+'/reply','POST',{'text':'已核对您的订单'},role='agent');assert s['user_id']=='u3' and s['messages'][-1]['role']=='agent'
+   test('重复接管幂等，客服可以回复其他用户',idempotent_claim)
+   def queue_risk():
+    s=req('/sessions','POST');s=req('/sessions/'+s['id']+'/messages','POST',{'text':'我要退款800元'});assert s['risk_locked']
+    req('/agent/'+s['id']+'/assign','POST',{'queue':'售前客服'},role='agent',expected=409)
+    req('/sessions/'+s['id']+'/handoff','POST',{'queue':'物流客服'},expected=409)
+   test('高风险不能通过队列切换绕过审核',queue_risk)
+   def ticket_owner():
+    s=req('/sessions','POST',role='customer3');s=req('/sessions/'+s['id']+'/messages','POST',{'text':'S20260817006 帮我催单'},role='customer3');assert s['pending']
+    s=req('/sessions/'+s['id']+'/confirm','POST',{'confirmation_id':s['pending']['id']},role='customer3');t=s['messages'][-1]['card']['ticket'];assert t['user_id']=='u3'
+    assert req('/tickets/'+t['id'],role='customer3')['user_id']=='u3';req('/tickets/'+t['id'],expected=403)
+   test('新用户工单归属正确且不能跨用户查看',ticket_owner)
    first_turn_resolved=sum(s['state']=='查询成功' for s in conversations)
    # 逐条执行真正的用户补充动作，单列完整会话结果，保留首轮断言不变。
    for i,s in enumerate(conversations):
@@ -110,6 +176,7 @@ def main():
   for x in extra:report+=f'- {"通过" if x["pass"] else "失败"}：{x["name"]} {x.get("error","")}\n'
   report+=f'\n首轮查询成功比例：{first_turn_resolved/20*100:.1f}%。完整会话解决比例：{resolved/20*100:.1f}%。完整口径只增加实际选单与确认操作，不排除异常、高风险或待补充样本。\n'
   report+='\n此为小样本开发回归，不能推算真实自动解决率、幻觉率或线上 SLA。业务目标未达阈值即如实标记，禁止把未测指标记为通过。\n'
+  report='\n'.join(line.rstrip() for line in report.splitlines())+'\n'
   (ROOT/'reports/eval.md').write_text(report,encoding='utf-8');(ROOT/'reports/eval.json').write_text(json.dumps({'cases':results,'integration':extra,'metrics':metrics},ensure_ascii=False,indent=2),encoding='utf-8')
   print(f'Cases {passed}/20; integration {xp}/{len(extra)}; average {average:.3f}s; reports/eval.md')
   return 0 if passed==20 and xp==len(extra) else 1

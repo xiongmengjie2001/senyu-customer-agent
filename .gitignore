@@ -12,3 +12,4 @@ frontend/dist/
 *.log
 .pytest_cache/
 reports/senyu-eval-*/
+data/backups/
