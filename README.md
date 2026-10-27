@@ -4,6 +4,16 @@ React 三端 + FastAPI + SQLite 模拟业务系统 + FAISS 本地知识库 + Dif
 
 **已实测跑通本地规则演示闭环；Dify 容器和外部模型尚未通过端到端验收。** 本机 Docker Desktop 启动失败，详见 [验证记录](docs/verification.md)。不得把规则模式测试结果当作模型效果。
 
+## 业务泳道图
+
+六条泳道展示查物流、确认催单、人工接管与知识问答，标明 L1 / L2 / L3 权限边界及 Dify 待验证部分。
+
+![森屿生活客服 Agent 泳道图](docs/diagrams/senyu-agent-swimlane.png)
+
+[查看高清 PNG](docs/diagrams/senyu-agent-swimlane.png) · [下载可编辑 SVG](docs/diagrams/senyu-agent-swimlane.svg) · [生成脚本](docs/diagrams/draw_swimlane.py)
+
+生成脚本需 Windows 微软雅黑字体与 Pillow，仅用于文档绘图，不影响应用运行。
+
 ## 启动
 
 在当前项目目录打开 PowerShell（Python 3.12、Node.js 24）：
