@@ -1,0 +1,11 @@
+services:
+  senyu:
+    build: .
+    ports:
+      - '127.0.0.1:8000:8000'
+    env_file: .env
+    environment:
+      DB_PATH: /app/data/senyu.sqlite3
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped

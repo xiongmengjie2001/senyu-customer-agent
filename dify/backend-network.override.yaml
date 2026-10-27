@@ -1,0 +1,15 @@
+# 可选：后端容器与 Dify SSRF 代理加入专用网络；保留原有网络。
+# 先 docker network create senyu-demo
+# 后端：docker network connect senyu-demo <后端容器名>
+# Dify：docker compose -f docker-compose.yaml -f ../../../dify/backend-network.override.yaml up -d
+# 工作流 BACKEND_URL 填 http://senyu:8000（后端使用此网络别名）
+services:
+  ssrf_proxy:
+    networks:
+      - ssrf_proxy_network
+      - default
+      - senyu_demo
+networks:
+  senyu_demo:
+    external: true
+    name: senyu-demo

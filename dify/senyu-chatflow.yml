@@ -1,0 +1,401 @@
+app:
+  name: 森屿生活客服 · 受控 Agent
+  description: Dify 编排意图、FAISS 检索与受控工具；业务规则/确认/归属校验由后端执行。
+  mode: advanced-chat
+  icon: 🌿
+  icon_background: '#E6EEDD'
+  use_icon_as_answer_icon: false
+dependencies: []
+kind: app
+version: 0.3.1
+workflow:
+  conversation_variables: []
+  environment_variables:
+  - id: 1ff9c2b4-2c14-42d2-bb5c-d60f59116b68
+    name: BACKEND_URL
+    value_type: string
+    value: http://host.docker.internal:8000
+    selector:
+    - env
+    - BACKEND_URL
+  - id: 5f3d164e-3af9-43b4-b352-55ce0ee88650
+    name: TOOLS_TOKEN
+    value_type: secret
+    value: replace-with-local-tool-secret
+    selector:
+    - env
+    - TOOLS_TOKEN
+  features:
+    file_upload:
+      enabled: false
+    opening_statement: ''
+    retriever_resource:
+      enabled: false
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+  graph:
+    nodes:
+    - id: start
+      type: custom
+      position:
+        x: 0
+        y: 240
+      positionAbsolute:
+        x: 0
+        y: 240
+      width: 244
+      height: 100
+      sourcePosition: right
+      targetPosition: left
+      data:
+        type: start
+        title: 开始 · 多轮会话
+        desc: ''
+        selected: false
+        variables:
+        - label: 业务会话 ID
+          variable: session_id
+          type: text-input
+          required: true
+          max_length: 64
+          options: []
+    - id: prepare
+      type: custom
+      position:
+        x: 330
+        y: 240
+      positionAbsolute:
+        x: 330
+        y: 240
+      width: 244
+      height: 100
+      sourcePosition: right
+      targetPosition: left
+      data:
+        type: code
+        title: 安全序列化输入
+        desc: ''
+        selected: false
+        code_language: python3
+        code: "import json\ndef main(query: str):\n    return {\"payload\":json.dumps({\"\
+          text\":query},ensure_ascii=False)}"
+        variables:
+        - variable: query
+          value_selector:
+          - sys
+          - query
+          value_type: string
+        outputs:
+          payload:
+            type: string
+            children: null
+    - id: route
+      type: custom
+      position:
+        x: 660
+        y: 240
+      positionAbsolute:
+        x: 660
+        y: 240
+      width: 244
+      height: 100
+      sourcePosition: right
+      targetPosition: left
+      data:
+        type: http-request
+        title: 意图识别 / 风险标记
+        desc: ''
+        selected: false
+        method: post
+        url: '{{#env.BACKEND_URL#}}/api/tools/route'
+        authorization:
+          type: no-auth
+        headers: 'Content-Type:application/json
+
+          Authorization:Bearer {{#env.TOOLS_TOKEN#}}'
+        params: ''
+        body:
+          type: raw-text
+          data:
+          - id: ddd3b4b6-fca6-4e92-b99b-a1ed908e000b
+            key: ''
+            type: text
+            value: '{{#prepare.payload#}}'
+        timeout:
+          connect: 3
+          read: 5
+          write: 3
+        retry_config:
+          retry_enabled: false
+          max_retries: 1
+          retry_interval: 100
+        ssl_verify: true
+    - id: rag
+      type: custom
+      position:
+        x: 990
+        y: 240
+      positionAbsolute:
+        x: 990
+        y: 240
+      width: 244
+      height: 100
+      sourcePosition: right
+      targetPosition: left
+      data:
+        type: http-request
+        title: FAISS · 已发布知识检索
+        desc: ''
+        selected: false
+        method: post
+        url: '{{#env.BACKEND_URL#}}/api/tools/knowledge'
+        authorization:
+          type: no-auth
+        headers: 'Content-Type:application/json
+
+          Authorization:Bearer {{#env.TOOLS_TOKEN#}}'
+        params: ''
+        body:
+          type: raw-text
+          data:
+          - id: 53d93295-04f6-4a7f-b570-447c76c18bdb
+            key: ''
+            type: text
+            value: '{{#prepare.payload#}}'
+        timeout:
+          connect: 3
+          read: 5
+          write: 3
+        retry_config:
+          retry_enabled: false
+          max_retries: 1
+          retry_interval: 100
+        ssl_verify: true
+    - id: serialize
+      type: custom
+      position:
+        x: 1320
+        y: 240
+      positionAbsolute:
+        x: 1320
+        y: 240
+      width: 244
+      height: 100
+      sourcePosition: right
+      targetPosition: left
+      data:
+        type: code
+        title: 组装受控业务请求
+        desc: ''
+        selected: false
+        code_language: python3
+        code: "import json\ndef main(query: str, session_id: str, decision: str, sources:\
+          \ str):\n    parsed=json.loads(decision)\n    if \"intent\" not in parsed:\
+          \ raise ValueError(\"意图工具失败\")\n    if \"sources\" not in json.loads(sources):\
+          \ raise ValueError(\"检索工具失败\")\n    return {\"payload\":json.dumps({\"session_id\"\
+          :session_id,\"text\":query,\"decision\":decision,\"sources\":sources},ensure_ascii=False)}"
+        variables:
+        - variable: query
+          value_selector:
+          - sys
+          - query
+          value_type: string
+        - variable: session_id
+          value_selector:
+          - start
+          - session_id
+          value_type: string
+        - variable: decision
+          value_selector:
+          - route
+          - body
+          value_type: string
+        - variable: sources
+          value_selector:
+          - rag
+          - body
+          value_type: string
+        outputs:
+          payload:
+            type: string
+            children: null
+    - id: process
+      type: custom
+      position:
+        x: 1650
+        y: 240
+      positionAbsolute:
+        x: 1650
+        y: 240
+      width: 244
+      height: 100
+      sourcePosition: right
+      targetPosition: left
+      data:
+        type: http-request
+        title: 状态流转 / 规则闸门 / 业务工具
+        desc: ''
+        selected: false
+        method: post
+        url: '{{#env.BACKEND_URL#}}/api/tools/process'
+        authorization:
+          type: no-auth
+        headers: 'Content-Type:application/json
+
+          Authorization:Bearer {{#env.TOOLS_TOKEN#}}'
+        params: ''
+        body:
+          type: raw-text
+          data:
+          - id: 2dcd3d8f-b09f-46c8-9850-59cf91df2253
+            key: ''
+            type: text
+            value: '{{#serialize.payload#}}'
+        timeout:
+          connect: 3
+          read: 5
+          write: 3
+        retry_config:
+          retry_enabled: false
+          max_retries: 1
+          retry_interval: 100
+        ssl_verify: true
+    - id: validate
+      type: custom
+      position:
+        x: 1980
+        y: 240
+      positionAbsolute:
+        x: 1980
+        y: 240
+      width: 244
+      height: 100
+      sourcePosition: right
+      targetPosition: left
+      data:
+        type: code
+        title: 核验结果，禁止谎报成功
+        desc: ''
+        selected: false
+        code_language: python3
+        code: "import json\ndef main(body: str):\n    data=json.loads(body)\n    if\
+          \ \"id\" not in data or \"state\" not in data: raise ValueError(\"业务工具失败，禁止声称成功\"\
+          )\n    return {\"result\":body}"
+        variables:
+        - variable: body
+          value_selector:
+          - process
+          - body
+          value_type: string
+        outputs:
+          result:
+            type: string
+            children: null
+    - id: answer
+      type: custom
+      position:
+        x: 2310
+        y: 240
+      positionAbsolute:
+        x: 2310
+        y: 240
+      width: 244
+      height: 100
+      sourcePosition: right
+      targetPosition: left
+      data:
+        type: answer
+        title: 返回结构化会话
+        desc: ''
+        selected: false
+        answer: '{{#validate.result#}}'
+        variables: []
+    edges:
+    - id: start-prepare
+      source: start
+      target: prepare
+      sourceHandle: source
+      targetHandle: target
+      type: custom
+      data:
+        sourceType: start
+        targetType: code
+        isInIteration: false
+        isInLoop: false
+    - id: prepare-route
+      source: prepare
+      target: route
+      sourceHandle: source
+      targetHandle: target
+      type: custom
+      data:
+        sourceType: code
+        targetType: http-request
+        isInIteration: false
+        isInLoop: false
+    - id: route-rag
+      source: route
+      target: rag
+      sourceHandle: source
+      targetHandle: target
+      type: custom
+      data:
+        sourceType: http-request
+        targetType: http-request
+        isInIteration: false
+        isInLoop: false
+    - id: rag-serialize
+      source: rag
+      target: serialize
+      sourceHandle: source
+      targetHandle: target
+      type: custom
+      data:
+        sourceType: http-request
+        targetType: code
+        isInIteration: false
+        isInLoop: false
+    - id: serialize-process
+      source: serialize
+      target: process
+      sourceHandle: source
+      targetHandle: target
+      type: custom
+      data:
+        sourceType: code
+        targetType: http-request
+        isInIteration: false
+        isInLoop: false
+    - id: process-validate
+      source: process
+      target: validate
+      sourceHandle: source
+      targetHandle: target
+      type: custom
+      data:
+        sourceType: http-request
+        targetType: code
+        isInIteration: false
+        isInLoop: false
+    - id: validate-answer
+      source: validate
+      target: answer
+      sourceHandle: source
+      targetHandle: target
+      type: custom
+      data:
+        sourceType: code
+        targetType: answer
+        isInIteration: false
+        isInLoop: false
+    viewport:
+      x: 0
+      y: 0
+      zoom: 0.6
