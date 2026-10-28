@@ -1,246 +1,320 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="3040" viewBox="0 0 1920 3040"><rect width="100%" height="100%" fill="#F7F9F5"/>
-<text x="52" y="64" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="44" text-anchor="start" dominant-baseline="middle" fill="#245B48">森屿生活 · 电商客服 Agent 泳道图</text>
-<text x="52" y="120" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="26" text-anchor="start" dominant-baseline="middle" fill="#6C8175">一位消费者的完整旅程：查物流 → 确认催单 → 工单反馈 → 人工接管</text>
-<text x="52" y="165" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="start" dominant-baseline="middle" fill="#6C8175">实线：本地闭环已验证    虚线：Dify 目标编排 / 条件分支    当前 Dify 与模型接入待实测</text>
-<rect x="24" y="212" width="312" height="1988" rx="0" fill="#EEF3EC" stroke="none" stroke-width="2"/>
-<rect x="30" y="212" width="300" height="74" rx="12" fill="#245B48" stroke="none" stroke-width="2"/>
-<text x="180" y="238" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="25" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">消费者</text>
-<text x="180" y="268" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" text-anchor="middle" dominant-baseline="middle" fill="#E0EBDD">提出诉求 / 补充 / 确认</text>
-<rect x="336" y="212" width="312" height="1988" rx="0" fill="#F8FAF6" stroke="none" stroke-width="2"/>
-<rect x="342" y="212" width="300" height="74" rx="12" fill="#DCE7D9" stroke="none" stroke-width="2"/>
-<text x="492" y="238" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="25" text-anchor="middle" dominant-baseline="middle" fill="#213E34">三端前端</text>
-<text x="492" y="268" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" text-anchor="middle" dominant-baseline="middle" fill="#6C8175">让过程与结果看得见</text>
-<polyline points="336,292 336,2190" fill="none" stroke="#D9E3D8" stroke-width="1" stroke-linejoin="round"/>
-<rect x="648" y="212" width="312" height="1988" rx="0" fill="#EEF3EC" stroke="none" stroke-width="2"/>
-<rect x="654" y="212" width="300" height="74" rx="12" fill="#DCE7D9" stroke="none" stroke-width="2"/>
-<text x="804" y="238" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="25" text-anchor="middle" dominant-baseline="middle" fill="#213E34">Dify / AI 编排</text>
-<text x="804" y="268" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" text-anchor="middle" dominant-baseline="middle" fill="#6C8175">理解意图，调用受控工具</text>
-<polyline points="648,292 648,2190" fill="none" stroke="#D9E3D8" stroke-width="1" stroke-linejoin="round"/>
-<rect x="960" y="212" width="312" height="1988" rx="0" fill="#F8FAF6" stroke="none" stroke-width="2"/>
-<rect x="966" y="212" width="300" height="74" rx="12" fill="#245B48" stroke="none" stroke-width="2"/>
-<text x="1116" y="238" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="25" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">后端规则闸门</text>
-<text x="1116" y="268" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" text-anchor="middle" dominant-baseline="middle" fill="#E0EBDD">身份 / 条件 / 权限 / 状态</text>
-<polyline points="960,292 960,2190" fill="none" stroke="#D9E3D8" stroke-width="1" stroke-linejoin="round"/>
-<rect x="1272" y="212" width="312" height="1988" rx="0" fill="#EEF3EC" stroke="none" stroke-width="2"/>
-<rect x="1278" y="212" width="300" height="74" rx="12" fill="#DCE7D9" stroke="none" stroke-width="2"/>
-<text x="1428" y="238" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="25" text-anchor="middle" dominant-baseline="middle" fill="#213E34">业务工具与知识库</text>
-<text x="1428" y="268" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" text-anchor="middle" dominant-baseline="middle" fill="#6C8175">查数据 / 检索 / 写工单</text>
-<polyline points="1272,292 1272,2190" fill="none" stroke="#D9E3D8" stroke-width="1" stroke-linejoin="round"/>
-<rect x="1584" y="212" width="312" height="1988" rx="0" fill="#F8FAF6" stroke="none" stroke-width="2"/>
-<rect x="1590" y="212" width="300" height="74" rx="12" fill="#DCE7D9" stroke="none" stroke-width="2"/>
-<text x="1740" y="238" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="25" text-anchor="middle" dominant-baseline="middle" fill="#213E34">人工客服</text>
-<text x="1740" y="268" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" text-anchor="middle" dominant-baseline="middle" fill="#6C8175">审核高风险 / 处理例外</text>
-<polyline points="1584,292 1584,2190" fill="none" stroke="#D9E3D8" stroke-width="1" stroke-linejoin="round"/>
-<rect x="56" y="284" width="248" height="92" rx="22" fill="#EDF3E7" stroke="#CADAC3" stroke-width="2"/>
-<text x="180" y="330.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="middle" dominant-baseline="middle" fill="#213E34">“我的包裹到哪了？”</text>
-<rect x="44" y="272" width="38" height="38" rx="19" fill="#245B48" stroke="none" stroke-width="2"/>
-<text x="63" y="291" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">1</text>
-<rect x="368" y="284" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
-<text x="492" y="315.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">显示正在查询</text>
-<text x="492" y="345.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">接收用户问题</text>
-<rect x="680" y="432" width="248" height="92" rx="12" fill="#EDF1F8" stroke="#B9CADD" stroke-width="2" stroke-dasharray="8 6"/>
-<text x="804" y="463.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">意图识别：查物流</text>
-<text x="804" y="493.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">提取订单等信息</text>
-<rect x="668" y="420" width="38" height="38" rx="19" fill="#245B48" stroke="none" stroke-width="2"/>
-<text x="687" y="439" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">2</text>
-<rect x="992" y="432" width="248" height="92" rx="12" fill="#FCF2DC" stroke="#D6B36A" stroke-width="2"/>
-<text x="1116" y="463.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">先查风险与权限</text>
-<text x="1116" y="493.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">是否属于 L3？</text>
-<rect x="1616" y="432" width="248" height="92" rx="12" fill="#F8EAE7" stroke="#D6AFAB" stroke-width="2"/>
-<text x="1740" y="463.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">禁止自动执行</text>
-<text x="1740" y="493.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">转有权限人工审核</text>
-<rect x="992" y="580" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
-<text x="1116" y="611.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">校验当前用户</text>
-<text x="1116" y="641.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">只允许查询本人订单</text>
-<rect x="980" y="568" width="38" height="38" rx="19" fill="#245B48" stroke="none" stroke-width="2"/>
-<text x="999" y="587" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">3</text>
-<rect x="1304" y="580" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
-<text x="1428" y="611.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">查询订单列表</text>
-<text x="1428" y="641.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">返回两个候选订单</text>
-<rect x="992" y="728" width="248" height="92" rx="12" fill="#FCF2DC" stroke="#D6B36A" stroke-width="2"/>
-<text x="1116" y="759.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">多订单消歧规则</text>
-<text x="1116" y="789.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">候选订单 ≥ 2？</text>
-<rect x="368" y="728" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
-<text x="492" y="759.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">展示订单选择卡片</text>
-<text x="492" y="789.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">运输中 / 待发货</text>
-<rect x="56" y="876" width="248" height="92" rx="22" fill="#EDF3E7" stroke="#CADAC3" stroke-width="2"/>
-<text x="180" y="907.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">选择运输中订单</text>
-<text x="180" y="937.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">S20260817001</text>
-<rect x="44" y="864" width="38" height="38" rx="19" fill="#245B48" stroke="none" stroke-width="2"/>
-<text x="63" y="883" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">4</text>
-<rect x="992" y="876" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
-<text x="1116" y="907.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">再次校验归属</text>
-<text x="1116" y="937.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">绑定本轮关联订单</text>
-<rect x="1304" y="1024" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
-<text x="1428" y="1055.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">L1 · 自动只读查询</text>
-<text x="1428" y="1085.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="middle" dominant-baseline="middle" fill="#213E34">顺丰轨迹 / 49h 未更新</text>
-<rect x="368" y="1024" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
-<text x="492" y="1055.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">展示预估送达 + 轨迹</text>
-<text x="492" y="1085.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="middle" dominant-baseline="middle" fill="#213E34">提供催单 / 转人工入口</text>
-<rect x="356" y="1012" width="38" height="38" rx="19" fill="#245B48" stroke="none" stroke-width="2"/>
-<text x="375" y="1031" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">5</text>
-<rect x="56" y="1172" width="248" height="92" rx="22" fill="#EDF3E7" stroke="#CADAC3" stroke-width="2"/>
-<text x="180" y="1218.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">“帮我催一下物流”</text>
-<rect x="992" y="1172" width="248" height="92" rx="12" fill="#FCF2DC" stroke="#D6B36A" stroke-width="2"/>
-<text x="1116" y="1203.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">是否已发货且</text>
-<text x="1116" y="1233.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">轨迹 ≥ 48h 未更新？</text>
-<rect x="980" y="1160" width="38" height="38" rx="19" fill="#245B48" stroke="none" stroke-width="2"/>
-<text x="999" y="1179" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">6</text>
-<rect x="368" y="1320" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
-<text x="492" y="1351.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">L2 · 四要素确认卡</text>
-<text x="492" y="1381.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#213E34">操作 / 订单 / 结果 / 撤销</text>
-<rect x="56" y="1468" width="248" height="92" rx="22" fill="#EDF3E7" stroke="#CADAC3" stroke-width="2"/>
-<text x="180" y="1499.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">核对内容</text>
-<text x="180" y="1529.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">点击“确认提交”</text>
-<rect x="44" y="1456" width="38" height="38" rx="19" fill="#245B48" stroke="none" stroke-width="2"/>
-<text x="63" y="1475" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">7</text>
-<rect x="992" y="1468" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
-<text x="1116" y="1499.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">校验一次性确认凭据</text>
-<text x="1116" y="1529.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#213E34">复核条件 / 防止重复执行</text>
-<rect x="1304" y="1616" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
-<text x="1428" y="1647.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">创建物流催单工单</text>
-<text x="1428" y="1677.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">记录审计与操作结果</text>
-<rect x="1292" y="1604" width="38" height="38" rx="19" fill="#245B48" stroke="none" stroke-width="2"/>
-<text x="1311" y="1623" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">8</text>
-<rect x="368" y="1616" width="248" height="92" rx="12" fill="#DFEDE4" stroke="#8EB69F" stroke-width="2"/>
-<text x="492" y="1647.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">成功卡 + 进度入口</text>
-<text x="492" y="1677.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">WL20260819008</text>
-<rect x="56" y="1764" width="248" height="92" rx="22" fill="#EDF3E7" stroke="#CADAC3" stroke-width="2"/>
-<text x="180" y="1810.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">“我想联系人工”</text>
-<rect x="44" y="1752" width="38" height="38" rx="19" fill="#245B48" stroke="none" stroke-width="2"/>
-<text x="63" y="1771" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">9</text>
-<rect x="992" y="1764" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
-<text x="1116" y="1795.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">生成完整交接单</text>
-<text x="1116" y="1825.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="middle" dominant-baseline="middle" fill="#213E34">保留对话、订单和动作</text>
-<rect x="1616" y="1912" width="248" height="92" rx="12" fill="#F8EAE7" stroke="#D6AFAB" stroke-width="2"/>
-<text x="1740" y="1943.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">分配物流客服队列</text>
-<text x="1740" y="1973.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">阅读摘要并接管会话</text>
-<rect x="1604" y="1900" width="38" height="38" rx="19" fill="#245B48" stroke="none" stroke-width="2"/>
-<text x="1623" y="1919" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">10</text>
-<rect x="1616" y="2060" width="248" height="92" rx="12" fill="#F8EAE7" stroke="#D6AFAB" stroke-width="2"/>
-<text x="1740" y="2091.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">人工核查并回复</text>
-<text x="1740" y="2121.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">无需重复询问订单</text>
-<rect x="368" y="2060" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
-<text x="492" y="2091.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">同步人工回复</text>
-<text x="492" y="2121.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">展示已接管状态</text>
-<rect x="56" y="2060" width="248" height="92" rx="22" fill="#EDF3E7" stroke="#CADAC3" stroke-width="2"/>
-<text x="180" y="2106.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">继续沟通 / 等待反馈</text>
-<polyline points="304,330 360,330" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
-<polygon points="360,330 348.2941876694152,335.654551943446 348.2941876694152,324.345448056554" fill="#245B48"/>
-<polyline points="492,376 492,404.0 804,404.0 804,425" fill="none" stroke="#32688C" stroke-width="3" stroke-linejoin="round" stroke-dasharray="9 7"/>
-<polygon points="804,425 798.345448056554,413.2941876694152 809.654551943446,413.2941876694152" fill="#32688C"/>
-<polyline points="928,478 984,478" fill="none" stroke="#32688C" stroke-width="3" stroke-linejoin="round" stroke-dasharray="9 7"/>
-<polygon points="984,478 972.2941876694152,483.654551943446 972.2941876694152,472.345448056554" fill="#32688C"/>
-<polyline points="1116,524 1116,573" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
-<polygon points="1116,573 1110.345448056554,561.2941876694152 1121.654551943446,561.2941876694152" fill="#245B48"/>
-<polyline points="1240,626 1296,626" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
-<polygon points="1296,626 1284.2941876694151,631.654551943446 1284.2941876694151,620.345448056554" fill="#245B48"/>
-<polyline points="1428,672 1428,700.0 1116,700.0 1116,721" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
-<polygon points="1116,721 1110.345448056554,709.2941876694152 1121.654551943446,709.2941876694152" fill="#245B48"/>
-<polyline points="992,774 624,774" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
-<polygon points="624,774 635.7058123305848,768.345448056554 635.7058123305848,779.654551943446" fill="#245B48"/>
-<polyline points="492,820 492,848.0 180,848.0 180,869" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
-<polygon points="180,869 174.345448056554,857.2941876694152 185.654551943446,857.2941876694152" fill="#245B48"/>
-<polyline points="304,922 984,922" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
-<polygon points="984,922 972.2941876694152,927.654551943446 972.2941876694152,916.345448056554" fill="#245B48"/>
-<polyline points="1116,968 1116,996.0 1428,996.0 1428,1017" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
-<polygon points="1428,1017 1422.345448056554,1005.2941876694152 1433.654551943446,1005.2941876694152" fill="#245B48"/>
-<polyline points="1304,1070 624,1070" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
-<polygon points="624,1070 635.7058123305848,1064.345448056554 635.7058123305848,1075.654551943446" fill="#245B48"/>
-<polyline points="492,1116 492,1144.0 180,1144.0 180,1165" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
-<polygon points="180,1165 174.345448056554,1153.2941876694151 185.654551943446,1153.2941876694151" fill="#245B48"/>
-<polyline points="304,1218 984,1218" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
-<polygon points="984,1218 972.2941876694152,1223.654551943446 972.2941876694152,1212.345448056554" fill="#245B48"/>
-<polyline points="1116,1264 1116,1292.0 492,1292.0 492,1313" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
-<polygon points="492,1313 486.345448056554,1301.2941876694151 497.654551943446,1301.2941876694151" fill="#245B48"/>
-<polyline points="492,1412 492,1440.0 180,1440.0 180,1461" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
-<polygon points="180,1461 174.345448056554,1449.2941876694151 185.654551943446,1449.2941876694151" fill="#245B48"/>
-<polyline points="304,1514 984,1514" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
-<polygon points="984,1514 972.2941876694152,1519.654551943446 972.2941876694152,1508.345448056554" fill="#245B48"/>
-<polyline points="1116,1560 1116,1588.0 1428,1588.0 1428,1609" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
-<polygon points="1428,1609 1422.345448056554,1597.2941876694151 1433.654551943446,1597.2941876694151" fill="#245B48"/>
-<polyline points="1304,1662 624,1662" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
-<polygon points="624,1662 635.7058123305848,1656.345448056554 635.7058123305848,1667.654551943446" fill="#245B48"/>
-<polyline points="492,1708 492,1736.0 180,1736.0 180,1757" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
-<polygon points="180,1757 174.345448056554,1745.2941876694151 185.654551943446,1745.2941876694151" fill="#245B48"/>
-<rect x="297.0" y="1698.0" width="78.0" height="34.0" rx="5" fill="#F7F9F5" stroke="none" stroke-width="2"/>
-<text x="336.0" y="1715.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#245B48">需人工</text>
-<polyline points="304,1810 984,1810" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
-<polygon points="984,1810 972.2941876694152,1815.654551943446 972.2941876694152,1804.345448056554" fill="#245B48"/>
-<polyline points="1116,1856 1116,1884.0 1740,1884.0 1740,1905" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
-<polygon points="1740,1905 1734.345448056554,1893.2941876694151 1745.654551943446,1893.2941876694151" fill="#245B48"/>
-<polyline points="1740,2004 1740,2053" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
-<polygon points="1740,2053 1734.345448056554,2041.2941876694151 1745.654551943446,2041.2941876694151" fill="#245B48"/>
-<polyline points="1616,2106 624,2106" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
-<polygon points="624,2106 635.7058123305848,2100.345448056554 635.7058123305848,2111.6545519434458" fill="#245B48"/>
-<polyline points="368,2106 312,2106" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
-<polygon points="312,2106 323.7058123305848,2100.345448056554 323.7058123305848,2111.6545519434458" fill="#245B48"/>
-<polyline points="1240,478 1608,478" fill="none" stroke="#A8524E" stroke-width="3" stroke-linejoin="round"/>
-<polygon points="1608,478 1596.2941876694151,483.654551943446 1596.2941876694151,472.345448056554" fill="#A8524E"/>
-<rect x="1352.5" y="439" width="143.0" height="34" rx="5" fill="#F7F9F5" stroke="none" stroke-width="2"/>
-<text x="1424.0" y="456" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#A8524E">是 · L3 高风险</text>
-<polyline points="492,376 492,406 1116,406 1116,432" fill="none" stroke="#A97822" stroke-width="2" stroke-linejoin="round" stroke-dasharray="9 7"/>
-<polygon points="1116,432 1110.345448056554,420.2941876694152 1121.654551943446,420.2941876694152" fill="#A97822"/>
-<rect x="699.0" y="389" width="242.0" height="34" rx="5" fill="#F7F9F5" stroke="none" stroke-width="2"/>
-<text x="820" y="406" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#A97822">本地规则演示：跳过 Dify</text>
-<polyline points="1240,774 1274,774 1274,1018 1428,1018 1428,1016" fill="none" stroke="#6C8175" stroke-width="2" stroke-linejoin="round" stroke-dasharray="9 7"/>
-<polygon points="1428,1016 1433.654551943446,1027.7058123305849 1422.345448056554,1027.7058123305849" fill="#6C8175"/>
-<rect x="1306.0" y="928" width="182.0" height="34" rx="5" fill="#F7F9F5" stroke="none" stroke-width="2"/>
-<text x="1397" y="945" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#6C8175">仅 1 个可确定订单</text>
-<text x="1116" y="1348" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="19" text-anchor="middle" dominant-baseline="middle" fill="#A97822">不满足条件 → 说明原因，不建工单</text>
-<text x="804" y="1496" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="19" text-anchor="middle" dominant-baseline="middle" fill="#A97822">取消确认 → 不执行；凭据过期 → 重新确认</text>
-<text x="52" y="2256" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="32" text-anchor="start" dominant-baseline="middle" fill="#245B48">另一条业务支线：商品问答与知识兜底</text>
-<text x="52" y="2301" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="23" text-anchor="start" dominant-baseline="middle" fill="#6C8175">知识只取“已发布”版本；未命中或冲突时交给人工，不编造答案。</text>
-<rect x="24" y="2340" width="312" height="300" rx="0" fill="#EEF3EC" stroke="none" stroke-width="2"/>
-<rect x="336" y="2340" width="312" height="300" rx="0" fill="#F8FAF6" stroke="none" stroke-width="2"/>
-<rect x="648" y="2340" width="312" height="300" rx="0" fill="#EEF3EC" stroke="none" stroke-width="2"/>
-<rect x="960" y="2340" width="312" height="300" rx="0" fill="#F8FAF6" stroke="none" stroke-width="2"/>
-<rect x="1272" y="2340" width="312" height="300" rx="0" fill="#EEF3EC" stroke="none" stroke-width="2"/>
-<rect x="1584" y="2340" width="312" height="300" rx="0" fill="#F8FAF6" stroke="none" stroke-width="2"/>
-<rect x="56" y="2354" width="248" height="92" rx="22" fill="#EDF3E7" stroke="#CADAC3" stroke-width="2"/>
-<text x="180" y="2400.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="middle" dominant-baseline="middle" fill="#213E34">“空气炸锅怎么洗？”</text>
-<rect x="680" y="2354" width="248" height="92" rx="12" fill="#EDF1F8" stroke="#B9CADD" stroke-width="2" stroke-dasharray="8 6"/>
-<text x="804" y="2385.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">识别商品问答</text>
-<text x="804" y="2415.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">触发知识检索</text>
-<rect x="1304" y="2354" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
-<text x="1428" y="2385.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">FAISS 检索发布知识</text>
-<text x="1428" y="2415.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">保留来源与版本</text>
-<rect x="992" y="2524" width="248" height="92" rx="12" fill="#FCF2DC" stroke="#D6B36A" stroke-width="2"/>
-<text x="1116" y="2555.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">核验命中与适用范围</text>
-<text x="1116" y="2585.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">知识不确定则转人工</text>
-<rect x="368" y="2524" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
-<text x="492" y="2555.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">回答 + 来源 + 版本</text>
-<text x="492" y="2585.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">主机不可浸水</text>
-<rect x="1616" y="2524" width="248" height="92" rx="12" fill="#F8EAE7" stroke="#D6AFAB" stroke-width="2"/>
-<text x="1740" y="2555.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">未命中 / 知识冲突</text>
-<text x="1740" y="2585.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">进入售前或售后队列</text>
-<polyline points="304,2400 672,2400" fill="none" stroke="#32688C" stroke-width="3" stroke-linejoin="round" stroke-dasharray="9 7"/>
-<polygon points="672,2400 660.2941876694152,2405.6545519434458 660.2941876694152,2394.3454480565542" fill="#32688C"/>
-<polyline points="928,2400 1296,2400" fill="none" stroke="#32688C" stroke-width="3" stroke-linejoin="round" stroke-dasharray="9 7"/>
-<polygon points="1296,2400 1284.2941876694151,2405.6545519434458 1284.2941876694151,2394.3454480565542" fill="#32688C"/>
-<polyline points="1428,2446 1428,2485.0 1116,2485.0 1116,2517" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
-<polygon points="1116,2517 1110.345448056554,2505.2941876694154 1121.654551943446,2505.2941876694154" fill="#245B48"/>
-<polyline points="992,2570 624,2570" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
-<polygon points="624,2570 635.7058123305848,2564.345448056554 635.7058123305848,2575.6545519434458" fill="#245B48"/>
-<rect x="759.0" y="2531" width="98.0" height="34" rx="5" fill="#F7F9F5" stroke="none" stroke-width="2"/>
-<text x="808.0" y="2548" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#245B48">可靠命中</text>
-<polyline points="1240,2570 1608,2570" fill="none" stroke="#A8524E" stroke-width="3" stroke-linejoin="round"/>
-<polygon points="1608,2570 1596.2941876694151,2575.6545519434458 1596.2941876694151,2564.3454480565542" fill="#A8524E"/>
-<rect x="1354.5" y="2531" width="139.0" height="34" rx="5" fill="#F7F9F5" stroke="none" stroke-width="2"/>
-<text x="1424.0" y="2548" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#A8524E">未命中 / 冲突</text>
-<text x="52" y="2700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" text-anchor="start" dominant-baseline="middle" fill="#245B48">三道权限边界，让系统知道“什么可以做，什么必须停”</text>
-<rect x="40" y="2745" width="596" height="147" rx="16" fill="#E6EFE7" stroke="none" stroke-width="2"/>
-<text x="64" y="2780" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" text-anchor="start" dominant-baseline="middle" fill="#245B48">L1 · 可自动查询</text>
-<text x="64" y="2822" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="start" dominant-baseline="middle" fill="#213E34">商品、本人订单、物流、售后政策</text>
-<text x="64" y="2856" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="start" dominant-baseline="middle" fill="#213E34">只读操作；不需要用户确认</text>
-<rect x="666" y="2745" width="596" height="147" rx="16" fill="#F9EFDA" stroke="none" stroke-width="2"/>
-<text x="690" y="2780" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" text-anchor="start" dominant-baseline="middle" fill="#A97822">L2 · 必须先确认</text>
-<text x="690" y="2822" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="start" dominant-baseline="middle" fill="#213E34">创建物流催单、提交常规售后申请</text>
-<text x="690" y="2856" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="start" dominant-baseline="middle" fill="#213E34">一次性凭据 + 归属复核 + 防重复执行</text>
-<rect x="1292" y="2745" width="596" height="147" rx="16" fill="#F6E7E3" stroke="none" stroke-width="2"/>
-<text x="1316" y="2780" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" text-anchor="start" dominant-baseline="middle" fill="#A8524E">L3 · 必须转人工</text>
-<text x="1316" y="2822" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="start" dominant-baseline="middle" fill="#213E34">高金额退款、赔偿、支付安全、法律风险</text>
-<text x="1316" y="2856" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="start" dominant-baseline="middle" fill="#213E34">用户确认也不能让 Agent 自动执行</text>
-<text x="52" y="2944" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="start" dominant-baseline="middle" fill="#6C8175">异常出口：理解不清 → 追问｜工具失败 → 重试并说明原因｜连续失败 / 5 轮未解决 → 转人工</text>
-<text x="52" y="2988" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="start" dominant-baseline="middle" fill="#245B48">交接五件套：用户与订单 + 诉求与对话 + 信息状态 + 系统动作 + 风险与建议</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="3790" viewBox="0 0 1920 3790"><rect width="100%" height="100%" fill="#F7F9F5"/>
+<text x="52" y="62" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="43" text-anchor="start" dominant-baseline="middle" fill="#245B48">森屿生活 · 完整电商客服闭环泳道图</text>
+<text x="52" y="116" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" text-anchor="start" dominant-baseline="middle" fill="#6C8175">选购下单 → 模拟履约 → 咨询与售后 → 星级评价 → 分类归档</text>
+<text x="52" y="158" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="start" dominant-baseline="middle" fill="#6C8175">实线：已验证的本地业务闭环    蓝色虚线：可选模型 / Dify 接入路径</text>
+<text x="52" y="192" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="start" dominant-baseline="middle" fill="#32688C">Docker 已恢复，Dify 1.17.1 运行中；本项目工作流与真实模型端到端仍待验证。</text>
+<rect x="24" y="234" width="312" height="2051" rx="0" fill="#EEF3EC" stroke="none" stroke-width="2"/>
+<rect x="30" y="234" width="300" height="74" rx="12" fill="#245B48" stroke="none" stroke-width="2"/>
+<text x="180" y="260" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="25" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">消费者</text>
+<text x="180" y="290" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" text-anchor="middle" dominant-baseline="middle" fill="#E0EBDD">选择商品 / 提问 / 确认 / 评价</text>
+<rect x="336" y="234" width="312" height="2051" rx="0" fill="#F8FAF6" stroke="none" stroke-width="2"/>
+<rect x="342" y="234" width="300" height="74" rx="12" fill="#DCE7D9" stroke="none" stroke-width="2"/>
+<text x="492" y="260" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="25" text-anchor="middle" dominant-baseline="middle" fill="#213E34">商城与会话端</text>
+<text x="492" y="290" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" text-anchor="middle" dominant-baseline="middle" fill="#6C8175">商品、订单、操作与结果可见</text>
+<polyline points="336,314 336,2275" fill="none" stroke="#D9E3D8" stroke-width="1" stroke-linejoin="round"/>
+<rect x="648" y="234" width="312" height="2051" rx="0" fill="#EEF3EC" stroke="none" stroke-width="2"/>
+<rect x="654" y="234" width="300" height="74" rx="12" fill="#DCE7D9" stroke="none" stroke-width="2"/>
+<text x="804" y="260" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="25" text-anchor="middle" dominant-baseline="middle" fill="#213E34">智能客服理解</text>
+<text x="804" y="290" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" text-anchor="middle" dominant-baseline="middle" fill="#6C8175">规则优先 / 可选 API 或 Dify</text>
+<polyline points="648,314 648,2275" fill="none" stroke="#D9E3D8" stroke-width="1" stroke-linejoin="round"/>
+<rect x="960" y="234" width="312" height="2051" rx="0" fill="#F8FAF6" stroke="none" stroke-width="2"/>
+<rect x="966" y="234" width="300" height="74" rx="12" fill="#245B48" stroke="none" stroke-width="2"/>
+<text x="1116" y="260" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="25" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">后端业务规则</text>
+<text x="1116" y="290" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" text-anchor="middle" dominant-baseline="middle" fill="#E0EBDD">归属、价格、库存、确认、权限</text>
+<polyline points="960,314 960,2275" fill="none" stroke="#D9E3D8" stroke-width="1" stroke-linejoin="round"/>
+<rect x="1272" y="234" width="312" height="2051" rx="0" fill="#EEF3EC" stroke="none" stroke-width="2"/>
+<rect x="1278" y="234" width="300" height="74" rx="12" fill="#DCE7D9" stroke="none" stroke-width="2"/>
+<text x="1428" y="260" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="25" text-anchor="middle" dominant-baseline="middle" fill="#213E34">模拟业务与知识库</text>
+<text x="1428" y="290" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" text-anchor="middle" dominant-baseline="middle" fill="#6C8175">订单 / 物流 / 售后 / FAISS</text>
+<polyline points="1272,314 1272,2275" fill="none" stroke="#D9E3D8" stroke-width="1" stroke-linejoin="round"/>
+<rect x="1584" y="234" width="312" height="2051" rx="0" fill="#F8FAF6" stroke="none" stroke-width="2"/>
+<rect x="1590" y="234" width="300" height="74" rx="12" fill="#DCE7D9" stroke="none" stroke-width="2"/>
+<text x="1740" y="260" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="25" text-anchor="middle" dominant-baseline="middle" fill="#213E34">人工与运营</text>
+<text x="1740" y="290" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" text-anchor="middle" dominant-baseline="middle" fill="#6C8175">必要时审核 / 问题分类归档</text>
+<polyline points="1584,314 1584,2275" fill="none" stroke="#D9E3D8" stroke-width="1" stroke-linejoin="round"/>
+<rect x="56" y="314" width="248" height="92" rx="22" fill="#EDF3E7" stroke="#CADAC3" stroke-width="2"/>
+<text x="180" y="360.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="middle" dominant-baseline="middle" fill="#213E34">选择型号、款式与数量</text>
+<rect x="44" y="302" width="38" height="38" rx="19" fill="#245B48" stroke="none" stroke-width="2"/>
+<text x="63" y="321" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">1</text>
+<rect x="368" y="314" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
+<text x="492" y="345.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">商城商品卡</text>
+<text x="492" y="375.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="middle" dominant-baseline="middle" fill="#213E34">6 款商品 / 各自价格库存</text>
+<rect x="992" y="446" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
+<text x="1116" y="477.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="middle" dominant-baseline="middle" fill="#213E34">服务器核对价格与库存</text>
+<text x="1116" y="507.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">只接受本人的身份</text>
+<rect x="368" y="446" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
+<text x="492" y="477.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">L2 · 模拟购买确认</text>
+<text x="492" y="507.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#213E34">操作 / 金额 / 结果 / 撤销</text>
+<rect x="56" y="578" width="248" height="92" rx="22" fill="#EDF3E7" stroke="#CADAC3" stroke-width="2"/>
+<text x="180" y="624.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">点击“确认提交”</text>
+<rect x="44" y="566" width="38" height="38" rx="19" fill="#245B48" stroke="none" stroke-width="2"/>
+<text x="63" y="585" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">2</text>
+<rect x="992" y="578" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
+<text x="1116" y="609.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">核验一次性确认凭据</text>
+<text x="1116" y="639.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="middle" dominant-baseline="middle" fill="#213E34">价格复核 / 防重复下单</text>
+<rect x="1304" y="578" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
+<text x="1428" y="609.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">生成本人订单与物流</text>
+<text x="1428" y="639.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" text-anchor="middle" dominant-baseline="middle" fill="#213E34">扣减模拟库存 / 无真实支付</text>
+<rect x="368" y="710" width="248" height="92" rx="12" fill="#DFEDE4" stroke="#8EB69F" stroke-width="2"/>
+<text x="492" y="741.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">模拟购买成功</text>
+<text x="492" y="771.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">我的订单 / 物流入口</text>
+<rect x="356" y="698" width="38" height="38" rx="19" fill="#245B48" stroke="none" stroke-width="2"/>
+<text x="375" y="717" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">3</text>
+<rect x="56" y="842" width="248" height="92" rx="22" fill="#EDF3E7" stroke="#CADAC3" stroke-width="2"/>
+<text x="180" y="873.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#213E34">查物流 / 问价格 / 问用法</text>
+<text x="180" y="903.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">沿用本轮商品与订单</text>
+<rect x="44" y="830" width="38" height="38" rx="19" fill="#245B48" stroke="none" stroke-width="2"/>
+<text x="63" y="849" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">4</text>
+<rect x="680" y="842" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
+<text x="804" y="873.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">意图识别 + 上下文</text>
+<text x="804" y="903.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">本地规则优先</text>
+<rect x="680" y="974" width="248" height="92" rx="12" fill="#EDF1F8" stroke="#B9CADD" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="804" y="1005.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">可选模型 / Dify 编排</text>
+<text x="804" y="1035.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="middle" dominant-baseline="middle" fill="#213E34">辅助理解，不决定权限</text>
+<rect x="992" y="974" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
+<text x="1116" y="1005.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">L1 · 只读权限校验</text>
+<text x="1116" y="1035.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#213E34">核对本人订单与适用型号</text>
+<rect x="1304" y="974" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
+<text x="1428" y="1005.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="middle" dominant-baseline="middle" fill="#213E34">查订单、物流或 FAISS</text>
+<text x="1428" y="1035.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#213E34">知识保留来源与发布版本</text>
+<rect x="368" y="1106" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
+<text x="492" y="1137.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#213E34">展示结果、依据与下一步</text>
+<text x="492" y="1167.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">价格确定 / 物流透明</text>
+<rect x="992" y="1106" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
+<text x="1116" y="1137.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#213E34">模拟履约开关与版本检查</text>
+<text x="1116" y="1167.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#213E34">按钮推进，拒绝重复更新</text>
+<rect x="1304" y="1106" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
+<text x="1428" y="1137.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">模拟物流逐步推进</text>
+<text x="1428" y="1167.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" text-anchor="middle" dominant-baseline="middle" fill="#213E34">揽收 → 运输 → 派送 → 签收</text>
+<rect x="56" y="1238" width="248" height="92" rx="22" fill="#EDF3E7" stroke="#CADAC3" stroke-width="2"/>
+<text x="180" y="1284.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#213E34">“好的，谢谢 / 明白了”</text>
+<rect x="44" y="1226" width="38" height="38" rx="19" fill="#245B48" stroke="none" stroke-width="2"/>
+<text x="63" y="1245" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">5</text>
+<rect x="992" y="1238" width="248" height="92" rx="12" fill="#FCF2DC" stroke="#D6B36A" stroke-width="2"/>
+<text x="1116" y="1269.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">仍有待确认操作？</text>
+<text x="1116" y="1299.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="19" text-anchor="middle" dominant-baseline="middle" fill="#213E34">有：回到确认，不代替执行</text>
+<rect x="368" y="1370" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
+<text x="492" y="1401.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">展示 1–5 星服务评价</text>
+<text x="492" y="1431.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">评价意见可填写</text>
+<rect x="356" y="1358" width="38" height="38" rx="19" fill="#245B48" stroke="none" stroke-width="2"/>
+<text x="375" y="1377" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">6</text>
+<rect x="56" y="1502" width="248" height="92" rx="22" fill="#EDF3E7" stroke="#CADAC3" stroke-width="2"/>
+<text x="180" y="1548.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">选择星级并提交意见</text>
+<rect x="992" y="1502" width="248" height="92" rx="12" fill="#FCF2DC" stroke="#D6B36A" stroke-width="2"/>
+<text x="1116" y="1533.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">记录真实选择的星级</text>
+<text x="1116" y="1563.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="middle" dominant-baseline="middle" fill="#213E34">评分分流 / 防重复评价</text>
+<rect x="1616" y="1502" width="248" height="92" rx="12" fill="#DFEDE4" stroke="#8EB69F" stroke-width="2"/>
+<text x="1740" y="1533.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="middle" dominant-baseline="middle" fill="#213E34">按订单与主题分类归档</text>
+<text x="1740" y="1563.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="middle" dominant-baseline="middle" fill="#213E34">保留诉求、状态与星级</text>
+<rect x="1604" y="1490" width="38" height="38" rx="19" fill="#245B48" stroke="none" stroke-width="2"/>
+<text x="1623" y="1509" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">7</text>
+<rect x="368" y="1634" width="248" height="92" rx="12" fill="#DFEDE4" stroke="#8EB69F" stroke-width="2"/>
+<text x="492" y="1665.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="middle" dominant-baseline="middle" fill="#213E34">4–5 星：本轮咨询完成</text>
+<text x="492" y="1695.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">继续购物 / 查看订单</text>
+<rect x="992" y="1634" width="248" height="92" rx="12" fill="#FCF2DC" stroke="#D6B36A" stroke-width="2"/>
+<text x="1116" y="1665.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">1–3 星 / 普通不满意</text>
+<text x="1116" y="1695.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">先核对并继续解决</text>
+<rect x="980" y="1622" width="38" height="38" rx="19" fill="#245B48" stroke="none" stroke-width="2"/>
+<text x="999" y="1641" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">8</text>
+<rect x="368" y="1766" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
+<text x="492" y="1797.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">提供自助解决方案</text>
+<text x="492" y="1827.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="middle" dominant-baseline="middle" fill="#213E34">价格 / 物流 / 退货退款</text>
+<rect x="56" y="1898" width="248" height="92" rx="22" fill="#EDF3E7" stroke="#CADAC3" stroke-width="2"/>
+<text x="180" y="1929.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">补充原因或选择方案</text>
+<text x="180" y="1959.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">不因低分就被转人工</text>
+<rect x="680" y="1898" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
+<text x="804" y="1929.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">归纳具体问题</text>
+<text x="804" y="1959.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="middle" dominant-baseline="middle" fill="#213E34">知识首次未命中先追问</text>
+<rect x="992" y="2030" width="248" height="92" rx="12" fill="#FCF2DC" stroke="#D6B36A" stroke-width="2"/>
+<text x="1116" y="2061.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">能否在规则内解决？</text>
+<text x="1116" y="2091.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="middle" dominant-baseline="middle" fill="#213E34">核对资料、工具与权限</text>
+<rect x="980" y="2018" width="38" height="38" rx="19" fill="#245B48" stroke="none" stroke-width="2"/>
+<text x="999" y="2037" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">9</text>
+<rect x="368" y="2162" width="248" height="92" rx="12" fill="#DFEDE4" stroke="#8EB69F" stroke-width="2"/>
+<text x="492" y="2193.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="middle" dominant-baseline="middle" fill="#213E34">可解决：继续自助处理</text>
+<text x="492" y="2223.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">解决后再次邀请评价</text>
+<rect x="1616" y="2030" width="248" height="92" rx="12" fill="#F8EAE7" stroke="#D6AFAB" stroke-width="2"/>
+<text x="1740" y="2061.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">必要时转人工</text>
+<text x="1740" y="2091.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" text-anchor="middle" dominant-baseline="middle" fill="#213E34">主动要求 / 高风险 / 多次失败</text>
+<rect x="1604" y="2018" width="38" height="38" rx="19" fill="#245B48" stroke="none" stroke-width="2"/>
+<text x="1623" y="2037" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">10</text>
+<rect x="1616" y="2162" width="248" height="92" rx="12" fill="#F8EAE7" stroke="#D6AFAB" stroke-width="2"/>
+<text x="1740" y="2193.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#213E34">六技能队列 + 完整交接单</text>
+<text x="1740" y="2223.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#213E34">普通候接可返回智能客服</text>
+<polyline points="304,360 360,360" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="360,360 348.2941876694152,365.654551943446 348.2941876694152,354.345448056554" fill="#245B48"/>
+<polyline points="492,406 492,426.0 1116,426.0 1116,439" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1116,439 1110.345448056554,427.2941876694152 1121.654551943446,427.2941876694152" fill="#245B48"/>
+<polyline points="992,492 624,492" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="624,492 635.7058123305848,486.345448056554 635.7058123305848,497.654551943446" fill="#245B48"/>
+<polyline points="492,538 492,558.0 180,558.0 180,571" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="180,571 174.345448056554,559.2941876694152 185.654551943446,559.2941876694152" fill="#245B48"/>
+<polyline points="304,624 984,624" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="984,624 972.2941876694152,629.654551943446 972.2941876694152,618.345448056554" fill="#245B48"/>
+<polyline points="1240,624 1296,624" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1296,624 1284.2941876694151,629.654551943446 1284.2941876694151,618.345448056554" fill="#245B48"/>
+<polyline points="1428,670 1428,690.0 492,690.0 492,703" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="492,703 486.345448056554,691.2941876694152 497.654551943446,691.2941876694152" fill="#245B48"/>
+<polyline points="492,802 492,822.0 180,822.0 180,835" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="180,835 174.345448056554,823.2941876694152 185.654551943446,823.2941876694152" fill="#245B48"/>
+<polyline points="304,888 672,888" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="672,888 660.2941876694152,893.654551943446 660.2941876694152,882.345448056554" fill="#245B48"/>
+<polyline points="804,934 804,954.0 1116,954.0 1116,967" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1116,967 1110.345448056554,955.2941876694152 1121.654551943446,955.2941876694152" fill="#245B48"/>
+<polyline points="1240,1020 1296,1020" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1296,1020 1284.2941876694151,1025.654551943446 1284.2941876694151,1014.345448056554" fill="#245B48"/>
+<polyline points="1428,1066 1428,1086.0 492,1086.0 492,1099" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="492,1099 486.345448056554,1087.2941876694151 497.654551943446,1087.2941876694151" fill="#245B48"/>
+<polyline points="492,1198 492,1218.0 180,1218.0 180,1231" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="180,1231 174.345448056554,1219.2941876694151 185.654551943446,1219.2941876694151" fill="#245B48"/>
+<polyline points="304,1284 984,1284" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="984,1284 972.2941876694152,1289.654551943446 972.2941876694152,1278.345448056554" fill="#245B48"/>
+<polyline points="1116,1330 1116,1350.0 492,1350.0 492,1363" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="492,1363 486.345448056554,1351.2941876694151 497.654551943446,1351.2941876694151" fill="#245B48"/>
+<polyline points="492,1462 492,1482.0 180,1482.0 180,1495" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="180,1495 174.345448056554,1483.2941876694151 185.654551943446,1483.2941876694151" fill="#245B48"/>
+<polyline points="304,1548 984,1548" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="984,1548 972.2941876694152,1553.654551943446 972.2941876694152,1542.345448056554" fill="#245B48"/>
+<polyline points="1240,1548 1608,1548" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1608,1548 1596.2941876694151,1553.654551943446 1596.2941876694151,1542.345448056554" fill="#245B48"/>
+<polyline points="1116,1726 1116,1746.0 492,1746.0 492,1759" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="492,1759 486.345448056554,1747.2941876694151 497.654551943446,1747.2941876694151" fill="#245B48"/>
+<polyline points="492,1858 492,1878.0 180,1878.0 180,1891" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="180,1891 174.345448056554,1879.2941876694151 185.654551943446,1879.2941876694151" fill="#245B48"/>
+<polyline points="304,1944 672,1944" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="672,1944 660.2941876694152,1949.654551943446 660.2941876694152,1938.345448056554" fill="#245B48"/>
+<polyline points="804,1990 804,2010.0 1116,2010.0 1116,2023" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1116,2023 1110.345448056554,2011.2941876694151 1121.654551943446,2011.2941876694151" fill="#245B48"/>
+<polyline points="804,934 804,967" fill="none" stroke="#32688C" stroke-width="3" stroke-linejoin="round" stroke-dasharray="9 7"/>
+<polygon points="804,967 798.345448056554,955.2941876694152 809.654551943446,955.2941876694152" fill="#32688C"/>
+<polyline points="928,1020 984,1020" fill="none" stroke="#32688C" stroke-width="3" stroke-linejoin="round" stroke-dasharray="9 7"/>
+<polygon points="984,1020 972.2941876694152,1025.654551943446 972.2941876694152,1014.345448056554" fill="#32688C"/>
+<polyline points="616,1152 984,1152" fill="none" stroke="#6C8175" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="984,1152 972.2941876694152,1157.654551943446 972.2941876694152,1146.345448056554" fill="#6C8175"/>
+<rect x="751.0" y="1113" width="98.0" height="34" rx="5" fill="#F7F9F5" stroke="none" stroke-width="2"/>
+<text x="800.0" y="1130" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#6C8175">演示按钮</text>
+<polyline points="1240,1152 1296,1152" fill="none" stroke="#6C8175" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1296,1152 1284.2941876694151,1157.654551943446 1284.2941876694151,1146.345448056554" fill="#6C8175"/>
+<polyline points="1116,1594 1116,1614.0 492,1614.0 492,1627" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="492,1627 486.345448056554,1615.2941876694151 497.654551943446,1615.2941876694151" fill="#245B48"/>
+<rect x="764.5" y="1576.0" width="79.0" height="34.0" rx="5" fill="#F7F9F5" stroke="none" stroke-width="2"/>
+<text x="804.0" y="1593.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#245B48">4–5 星</text>
+<polyline points="1116,1594 1116,1627" fill="none" stroke="#A97822" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1116,1627 1110.345448056554,1615.2941876694151 1121.654551943446,1615.2941876694151" fill="#A97822"/>
+<rect x="1155.5" y="1597.0" width="79.0" height="34.0" rx="5" fill="#F7F9F5" stroke="none" stroke-width="2"/>
+<text x="1195" y="1614.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#A97822">1–3 星</text>
+<polyline points="1116,2122 1116,2142.0 492,2142.0 492,2155" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="492,2155 486.345448056554,2143.2941876694154 497.654551943446,2143.2941876694154" fill="#245B48"/>
+<rect x="755.0" y="2104.0" width="98.0" height="34.0" rx="5" fill="#F7F9F5" stroke="none" stroke-width="2"/>
+<text x="804.0" y="2121.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#245B48">可以自助</text>
+<polyline points="1240,2076 1608,2076" fill="none" stroke="#A8524E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1608,2076 1596.2941876694151,2081.6545519434458 1596.2941876694151,2070.3454480565542" fill="#A8524E"/>
+<rect x="1355.0" y="2037" width="138.0" height="34" rx="5" fill="#F7F9F5" stroke="none" stroke-width="2"/>
+<text x="1424.0" y="2054" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#A8524E">确实需要人工</text>
+<polyline points="1740,2122 1740,2155" fill="none" stroke="#A8524E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1740,2155 1734.345448056554,2143.2941876694154 1745.654551943446,2143.2941876694154" fill="#A8524E"/>
+<text x="1428" y="1284" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="19" text-anchor="middle" dominant-baseline="middle" fill="#245B48">普通咨询与低分不直接转人工</text>
+<text x="52" y="2350" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="32" text-anchor="start" dominant-baseline="middle" fill="#245B48">售后支线：常规退款先自助，不能处理时才升级</text>
+<text x="52" y="2393" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="start" dominant-baseline="middle" fill="#6C8175">未发货可取消退款；已发货按退货、入库、验收与退款流程推进。所有资金流转均为模拟。</text>
+<rect x="24" y="2425" width="312" height="945" rx="0" fill="#EEF3EC" stroke="none" stroke-width="2"/>
+<text x="180" y="2449" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#6C8175">消费者</text>
+<rect x="336" y="2425" width="312" height="945" rx="0" fill="#F8FAF6" stroke="none" stroke-width="2"/>
+<text x="492" y="2449" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#6C8175">商城与会话端</text>
+<rect x="648" y="2425" width="312" height="945" rx="0" fill="#EEF3EC" stroke="none" stroke-width="2"/>
+<text x="804" y="2449" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#6C8175">智能客服理解</text>
+<rect x="960" y="2425" width="312" height="945" rx="0" fill="#F8FAF6" stroke="none" stroke-width="2"/>
+<text x="1116" y="2449" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#6C8175">后端业务规则</text>
+<rect x="1272" y="2425" width="312" height="945" rx="0" fill="#EEF3EC" stroke="none" stroke-width="2"/>
+<text x="1428" y="2449" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#6C8175">模拟业务与知识库</text>
+<rect x="1584" y="2425" width="312" height="945" rx="0" fill="#F8FAF6" stroke="none" stroke-width="2"/>
+<text x="1740" y="2449" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#6C8175">人工与运营</text>
+<rect x="56" y="2479" width="248" height="92" rx="22" fill="#EDF3E7" stroke="#CADAC3" stroke-width="2"/>
+<text x="180" y="2525.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="middle" dominant-baseline="middle" fill="#213E34">“不满意，我要退款”</text>
+<rect x="44" y="2467" width="38" height="38" rx="19" fill="#245B48" stroke="none" stroke-width="2"/>
+<text x="63" y="2486" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">11</text>
+<rect x="992" y="2479" width="248" height="92" rx="12" fill="#FCF2DC" stroke="#D6B36A" stroke-width="2"/>
+<text x="1116" y="2510.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="middle" dominant-baseline="middle" fill="#213E34">核对归属、金额与原因</text>
+<text x="1116" y="2540.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">商品状态 / 退货条件</text>
+<rect x="1616" y="2479" width="248" height="92" rx="12" fill="#F8EAE7" stroke="#D6AFAB" stroke-width="2"/>
+<text x="1740" y="2510.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">高金额或规则例外</text>
+<text x="1740" y="2540.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="middle" dominant-baseline="middle" fill="#213E34">转有权限售后人工审核</text>
+<rect x="368" y="2609" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
+<text x="492" y="2640.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">L2 · 售后四要素确认</text>
+<text x="492" y="2670.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="middle" dominant-baseline="middle" fill="#213E34">未确认不取消、不退货</text>
+<rect x="56" y="2739" width="248" height="92" rx="22" fill="#EDF3E7" stroke="#CADAC3" stroke-width="2"/>
+<text x="180" y="2785.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">核对后确认提交</text>
+<rect x="44" y="2727" width="38" height="38" rx="19" fill="#245B48" stroke="none" stroke-width="2"/>
+<text x="63" y="2746" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">12</text>
+<rect x="992" y="2739" width="248" height="92" rx="12" fill="#FCF2DC" stroke="#D6B36A" stroke-width="2"/>
+<text x="1116" y="2770.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">确认凭据与状态复核</text>
+<text x="1116" y="2800.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">按是否发货分流</text>
+<rect x="1304" y="2869" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
+<text x="1428" y="2900.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="middle" dominant-baseline="middle" fill="#213E34">未发货：取消模拟订单</text>
+<text x="1428" y="2930.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">进入模拟退款处理中</text>
+<rect x="1304" y="2999" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
+<text x="1428" y="3030.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="23" text-anchor="middle" dominant-baseline="middle" fill="#213E34">已发货：申请 → 寄回</text>
+<text x="1428" y="3060.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" text-anchor="middle" dominant-baseline="middle" fill="#213E34">入库 → 验收 → 退款处理中</text>
+<rect x="368" y="3129" width="248" height="92" rx="12" fill="#DFEDE4" stroke="#8EB69F" stroke-width="2"/>
+<text x="492" y="3160.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">模拟退款完成</text>
+<text x="492" y="3190.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">未完成前不谎报成功</text>
+<rect x="356" y="3117" width="38" height="38" rx="19" fill="#245B48" stroke="none" stroke-width="2"/>
+<text x="375" y="3136" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">13</text>
+<rect x="56" y="3259" width="248" height="92" rx="22" fill="#EDF3E7" stroke="#CADAC3" stroke-width="2"/>
+<text x="180" y="3305.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">问题解决，继续评价</text>
+<rect x="368" y="3259" width="248" height="92" rx="12" fill="#FFFFFF" stroke="#D9E3D8" stroke-width="2"/>
+<text x="492" y="3290.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">再次邀请评价</text>
+<text x="492" y="3320.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">或继续新的咨询</text>
+<rect x="1616" y="3259" width="248" height="92" rx="12" fill="#DFEDE4" stroke="#8EB69F" stroke-width="2"/>
+<text x="1740" y="3290.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#213E34">更新处理状态与评价</text>
+<text x="1740" y="3320.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#213E34">不同订单、主题独立归档</text>
+<rect x="1604" y="3247" width="38" height="38" rx="19" fill="#245B48" stroke="none" stroke-width="2"/>
+<text x="1623" y="3266" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF">14</text>
+<polyline points="304,2525 984,2525" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="984,2525 972.2941876694152,2530.6545519434458 972.2941876694152,2519.3454480565542" fill="#245B48"/>
+<polyline points="1240,2525 1608,2525" fill="none" stroke="#A8524E" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1608,2525 1596.2941876694151,2530.6545519434458 1596.2941876694151,2519.3454480565542" fill="#A8524E"/>
+<rect x="1336.5" y="2486" width="175.0" height="34" rx="5" fill="#F7F9F5" stroke="none" stroke-width="2"/>
+<text x="1424.0" y="2503" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#A8524E">&gt;500 元等高风险</text>
+<polyline points="1116,2571 1116,2590.0 492,2590.0 492,2602" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="492,2602 486.345448056554,2590.2941876694154 497.654551943446,2590.2941876694154" fill="#245B48"/>
+<rect x="715.0" y="2552.0" width="178.0" height="34.0" rx="5" fill="#F7F9F5" stroke="none" stroke-width="2"/>
+<text x="804.0" y="2569.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#245B48">符合自动处理规则</text>
+<polyline points="492,2701 492,2720.0 180,2720.0 180,2732" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="180,2732 174.345448056554,2720.2941876694154 185.654551943446,2720.2941876694154" fill="#245B48"/>
+<polyline points="304,2785 984,2785" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="984,2785 972.2941876694152,2790.6545519434458 972.2941876694152,2779.3454480565542" fill="#245B48"/>
+<polyline points="1116,2831 1116,2850.0 1428,2850.0 1428,2862" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1428,2862 1422.345448056554,2850.2941876694154 1433.654551943446,2850.2941876694154" fill="#245B48"/>
+<rect x="1233.0" y="2812.0" width="78.0" height="34.0" rx="5" fill="#F7F9F5" stroke="none" stroke-width="2"/>
+<text x="1272.0" y="2829.0" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#245B48">未发货</text>
+<polyline points="1240,2785 1274,2785 1274,3045 1296,3045" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1296,3045 1284.2941876694151,3050.6545519434458 1284.2941876694151,3039.3454480565542" fill="#245B48"/>
+<rect x="1288.0" y="2973" width="78.0" height="34" rx="5" fill="#F7F9F5" stroke="none" stroke-width="2"/>
+<text x="1327" y="2990" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" text-anchor="middle" dominant-baseline="middle" fill="#245B48">已发货</text>
+<polyline points="1552,2915 1580,2915 1580,3110 1116,3110" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1428,3091 1428,3110 1116,3110" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1116,3110 492,3110 492,3122" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="492,3122 486.345448056554,3110.2941876694154 497.654551943446,3110.2941876694154" fill="#245B48"/>
+<polyline points="492,3221 492,3240.0 180,3240.0 180,3252" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="180,3252 174.345448056554,3240.2941876694154 185.654551943446,3240.2941876694154" fill="#245B48"/>
+<polyline points="304,3305 360,3305" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="360,3305 348.2941876694152,3310.6545519434458 348.2941876694152,3299.3454480565542" fill="#245B48"/>
+<polyline points="616,3305 1608,3305" fill="none" stroke="#245B48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1608,3305 1596.2941876694151,3310.6545519434458 1596.2941876694151,3299.3454480565542" fill="#245B48"/>
+<text x="52" y="3420" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="31" text-anchor="start" dominant-baseline="middle" fill="#245B48">权限边界与兜底条件</text>
+<rect x="40" y="3464" width="596" height="142" rx="16" fill="#E6EFE7" stroke="none" stroke-width="2"/>
+<text x="64" y="3498" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="26" text-anchor="start" dominant-baseline="middle" fill="#245B48">L1 · 自动只读查询</text>
+<text x="64" y="3540" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="start" dominant-baseline="middle" fill="#213E34">商品价格、知识、本人订单、物流</text>
+<text x="64" y="3573" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="start" dominant-baseline="middle" fill="#213E34">结果来自数据库或已发布知识</text>
+<rect x="666" y="3464" width="596" height="142" rx="16" fill="#F9EFDA" stroke="none" stroke-width="2"/>
+<text x="690" y="3498" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="26" text-anchor="start" dominant-baseline="middle" fill="#A97822">L2 · 用户确认后写入</text>
+<text x="690" y="3540" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="start" dominant-baseline="middle" fill="#213E34">模拟购买、物流催单、常规退货退款</text>
+<text x="690" y="3573" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="start" dominant-baseline="middle" fill="#213E34">归属复核 + 一次性凭据 + 防重复</text>
+<rect x="1292" y="3464" width="596" height="142" rx="16" fill="#F6E7E3" stroke="none" stroke-width="2"/>
+<text x="1316" y="3498" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="26" text-anchor="start" dominant-baseline="middle" fill="#A8524E">L3 · 有权限人工审核</text>
+<text x="1316" y="3540" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="start" dominant-baseline="middle" fill="#213E34">高金额退款、赔偿、安全、法律风险</text>
+<text x="1316" y="3573" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="start" dominant-baseline="middle" fill="#213E34">用户确认也不能绕过风险权限</text>
+<text x="52" y="3658" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="start" dominant-baseline="middle" fill="#6C8175">首次知识未命中先追问；连续无法理解、知识多次核对无果或工具持续失败，才升级对应人工队列。</text>
+<text x="52" y="3700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" text-anchor="start" dominant-baseline="middle" fill="#245B48">交接五件套：用户与订单 + 诉求与对话 + 信息状态 + 已执行动作 + 风险与建议。</text>
+<text x="52" y="3738" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="19" text-anchor="start" dominant-baseline="middle" fill="#6C8175">范围说明：本图展示当前模拟业务；Docker/Dify 运行正常不等于项目工作流或真实模型已经联调验收。</text>
 </svg>
