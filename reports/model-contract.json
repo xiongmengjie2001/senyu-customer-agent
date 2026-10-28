@@ -1,0 +1,20 @@
+{
+  "provider": "本地协议测试桩，非真实模型",
+  "passed": true,
+  "calls": [
+    {
+      "path": "/v1/chat/completions",
+      "model": "contract-test-model"
+    },
+    {
+      "path": "/v1/chat/completions",
+      "model": "contract-test-model"
+    }
+  ],
+  "validated": [
+    "环境变量注入",
+    "本地模式可接兼容模型",
+    "模型只分类，价格从业务数据读取",
+    "管理端连接测试"
+  ]
+}
