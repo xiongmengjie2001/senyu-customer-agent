@@ -1,0 +1,73 @@
+{
+  "scope": "浏览器实测，仅前端滚动回归",
+  "checks": {
+    "longConversationTyping": true,
+    "historyTyping": true,
+    "historyNewReply": true,
+    "pageStableAfterLayoutFix": true,
+    "explicitJumpToBottom": true,
+    "followsOnlyWhenAtBottom": true
+  },
+  "measurements": {
+    "longBefore": {
+      "height": 7747,
+      "pageTop": 0,
+      "top": 6894,
+      "viewport": 853
+    },
+    "longTyped": {
+      "height": 7747,
+      "pageTop": 0,
+      "top": 6894,
+      "viewport": 853
+    },
+    "historyBefore": {
+      "height": 4210,
+      "pageTop": 0,
+      "top": 0,
+      "viewport": 355
+    },
+    "historyTyped": {
+      "height": 4210,
+      "pageTop": 26,
+      "top": 0,
+      "viewport": 355
+    },
+    "historyReplied": {
+      "height": 4552,
+      "pageTop": 26,
+      "top": 0,
+      "viewport": 355
+    },
+    "finalLayoutBefore": {
+      "height": 426,
+      "pageTop": 0,
+      "top": 97.33333587646484,
+      "viewport": 329
+    },
+    "finalLayoutTyped": {
+      "height": 426,
+      "pageTop": 0,
+      "top": 97.33333587646484,
+      "viewport": 329
+    },
+    "finalLayoutHistory": {
+      "height": 767,
+      "pageTop": 0,
+      "top": 0,
+      "viewport": 329
+    },
+    "jumped": {
+      "height": 767,
+      "pageTop": 0,
+      "top": 438.6666564941406,
+      "viewport": 329
+    },
+    "following": {
+      "height": 981,
+      "pageTop": 0,
+      "top": 652,
+      "viewport": 329
+    }
+  }
+}
