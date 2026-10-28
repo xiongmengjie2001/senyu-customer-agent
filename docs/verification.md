@@ -7,18 +7,15 @@
 - 规则回归与额外安全集成的实际值见 reports/eval.md，保留真实失败目标与未测项。
 - FAISS 运行成功，发布知识检索、停用排除和版本变更已通过集成检查。使用词法向量，不宣称具备预训练语义理解效果。
 
-## Docker 阻塞
+## Docker 当前状态（2026-10-28 已复验）
 
-尝试从官方程序和 `docker desktop start` 启动 Docker。`docker info` 无法连接 `dockerDesktopLinuxEngine`。本机 Docker 错误文件记录：
+- Docker Desktop 4.88.0，Engine 29.7.2，Compose v5.4.0，Linux/WSL2 引擎正常响应。
+- 本机 Dify 1.17.1 的 API、Worker、Web、Nginx 等容器运行中，API、Sandbox、PostgreSQL、Redis 等健康检查正常。
+- Nginx 映射到本机 80 / 443 端口，<http://localhost/signin> 返回 HTTP 200。
+- 本项目 `docker compose config --quiet` 通过，配置可解析。
+- 仓库参考部署文件固定为 Dify 1.18.0，与现有实例版本不同，不能据此直接宣称 DSL 已导入或端到端联调成功。
 
-```text
-initializing Ingest server: listening on unix://.../Docker/run/sailor-ingest.sock:
-The file cannot be accessed by the system.
-```
-
-只读诊断后尝试备份该遗留 socket，但该具体路径在文件系统检查中已不存在，未删除或清理任何 Docker 数据。没有执行重置 Docker、清空镜像、重装 WSL 或变更安全设置。
-
-需要本机 Docker 引擎恢复后执行 start-dify.ps1，初始化本地 Dify、导入 DSL、发布并填入应用密钥。没有模型授权密钥，因此外部模型、Dify 端到端、真实业务系统可靠性仍未测。
+2026-10-27 曾记录 Docker 启动时的 socket 访问错误；这是已恢复的历史问题，不再作为当前阻塞。本项目应用镜像构建、Chatflow 导入、工具网络与真实模型调用仍需分别验证。本次检查没有重建、升级或重启现有 Dify 实例。
 
 ## 范围与限制
 
@@ -26,4 +23,4 @@ The file cannot be accessed by the system.
 
 运营规则文本可维护，阈值实际驱动状态机；不支持运营任意编写条件表达式或执行代码。模型仅可补足未知意图，知识回答使用已发布原文，人工摘要目前由结构化上下文与用户原话拼接，不伪称已调用模型生成。
 
-20 条样本首轮查询成功比例为 50%；脚本实际补完选单和确认后，完整会话解决比例为 70%，转人工 15%。两个口径均保留，不排除异常、高风险或待补充样本。该结果仅是合成小样本规则模式回归，不能替代线上会话统计。
+最新合成用例与安全集成检查的结果以 `reports/eval.md` 为准；兼容模型协议测试见 `reports/model-contract.json`。这两者不能替代真实外部模型、Dify Chatflow 或线上会话效果验收。

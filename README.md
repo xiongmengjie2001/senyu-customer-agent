@@ -2,7 +2,7 @@
 
 React 三端 + FastAPI + SQLite 模拟业务系统 + FAISS 本地知识库 + Dify Chatflow。
 
-**已实测跑通本地规则演示闭环；Dify 容器和外部模型尚未通过端到端验收。** 本机 Docker Desktop 启动失败，详见 [验证记录](docs/verification.md)。不得把规则模式测试结果当作模型效果。
+**已实测跑通本地客服闭环；Docker 已恢复，本机 Dify 1.17.1 已运行。** 本项目 Chatflow 与外部模型尚待端到端联调，详见 [验证记录](docs/verification.md)。本地规则测试结果不代表真实模型效果。
 
 ## 业务泳道图
 
@@ -81,7 +81,7 @@ flowchart LR
 - React + Vite：三端共享组件与数据，静态构建由 FastAPI 同源提供，无 CDN 运行依赖。
 - FastAPI + SQLite：无额外数据库服务即可复现，工单、会话、知识、规则与审计持久化；演示只运行一个 worker。
 - **FAISS**：采用中文 1/2/3-gram 哈希归一化向量，支持中文词法检索且不需付费 embedding。它不是神经语义 embedding，口语泛化能力有限；低覆盖问题转人工。知识事实直接来自发布版本，避免模型创造参数与承诺。
-- Dify 1.18.0：固定官方 commit `50abea97062110044f15d0e03ccecadd9ccc87ca`。Chatflow 串联输入安全序列化、意图工具、知识工具、受控业务执行、输出核验，L2 确认留在服务端接口。官方 Docker Compose 作为独立依赖部署。
+- Dify 部署参考版本 1.18.0（本机现有实例为 1.17.1，需单独验证 DSL 兼容性）：固定官方 commit `50abea97062110044f15d0e03ccecadd9ccc87ca`。Chatflow 串联输入安全序列化、意图工具、知识工具、受控业务执行、输出核验，L2 确认留在服务端接口。官方 Docker Compose 作为独立依赖部署。
 - 可选 DeepSeek 兼容接口仅补足未知意图，规则与风险闸门优先；默认不启用、不产生 API 费用。退款、赔偿、支付安全、法律责任不自动处理。
 
 ## API Key 填在哪
@@ -127,4 +127,4 @@ Copy-Item .env.example .env  # 仅首次，不覆盖已有配置
 docker compose up -d --build
 ```
 
-访问地址仍为 <http://127.0.0.1:8000>。Dify 使用其官方 Compose 单独启动，说明见 docs/dify.md。此容器路径已提供配置，但本机 Docker 故障导致无法完成镜像构建与容器运行验证。
+访问地址仍为 <http://127.0.0.1:8000>。截至 2026-10-28，Docker 引擎已恢复正常，本机已有运行中的 Dify 1.17.1，可访问 <http://localhost/signin>。优先复用现有实例，接入说明见 [Dify 配置](docs/dify.md)。项目 Compose 配置已通过解析检查；本项目应用镜像构建、Chatflow 导入与模型端到端调用仍待单独验收。

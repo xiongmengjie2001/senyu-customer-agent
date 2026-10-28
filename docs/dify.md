@@ -2,15 +2,19 @@
 
 ## 状态
 
-已交付固定 1.18.0 官方 Docker 配置与可导入 Chatflow。当前机器 Docker 引擎启动失败，**尚未验证 DSL 导入、容器网络与 Dify 实际执行**。官方基础流程为复制 docker/.env.example 并执行 `docker compose up -d`，来源：[Dify 官方仓库](https://github.com/langgenius/dify/tree/1.18.0/docker)。
+截至 2026-10-28，**本机 Docker 引擎已恢复正常，现有 Dify 1.17.1 容器已运行**，API 与相关基础依赖健康，登录页 <http://localhost/signin> 可访问。仓库保留 1.18.0 的官方 Docker 配置作为部署参考；现有 1.17.1 实例的 Chatflow 导入兼容性、工具网络和本项目模型端到端调用仍待验证。官方部署参考：[Dify 官方仓库](https://github.com/langgenius/dify/tree/1.18.0/docker)。
 
-## 启动 Dify
+## 复用现有 Dify
+
+本机已有实例，当前 HTTP 端口为 80、HTTPS 端口为 443。优先打开 <http://localhost/signin>，在现有实例导入并发布项目 Chatflow，再将应用 API Key 配入本项目。此实例对应 `DIFY_API_URL=http://localhost/v1`。不要为了接入项目而重新运行另一版本的 Compose 覆盖现有实例。
+
+## 在全新环境启动 Dify
 
 ```powershell
 .\scripts\start-dify.ps1
 ```
 
-脚本检查引擎，缺少官方文件才下载固定版本；保留已有配置；HTTP 端口 8080，HTTPS 8443。打开 <http://localhost:8080/install> 初始化本地管理员，不提供预置管理员密码。
+下面的脚本用于全新环境，并非本机现有实例的启动步骤。脚本检查引擎，缺少官方文件才下载固定版本；保留已有配置；HTTP 端口 8080，HTTPS 8443。打开 <http://localhost:8080/install> 初始化本地管理员，不提供预置管理员密码。
 
 ## 本地原生后端接入
 
@@ -35,7 +39,8 @@
 
 ```dotenv
 APP_MODE=dify
-DIFY_API_URL=http://localhost:8080/v1
+DIFY_API_URL=http://localhost/v1
+# 全新环境使用脚本部署到 8080 时，才改为 http://localhost:8080/v1
 DIFY_API_KEY=本地应用密钥
 ```
 
