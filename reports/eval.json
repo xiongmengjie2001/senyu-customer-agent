@@ -1,163 +1,7 @@
 {
   "cases": [
     {
-      "id": "N01",
-      "group": "正常",
-      "pass": true,
-      "checks": {
-        "state": true,
-        "intent": true
-      },
-      "actual_state": "多订单待选择",
-      "answer": "找到多个订单，请选择本次要处理的订单。",
-      "final_state": "查询成功"
-    },
-    {
-      "id": "N02",
-      "group": "正常",
-      "pass": true,
-      "checks": {
-        "state": true,
-        "intent": true
-      },
-      "actual_state": "多订单待选择",
-      "answer": "找到多个订单，请选择本次要处理的订单。",
-      "final_state": "查询成功"
-    },
-    {
-      "id": "N03",
-      "group": "正常",
-      "pass": true,
-      "checks": {
-        "state": true,
-        "intent": true,
-        "answer": true,
-        "extraction": true
-      },
-      "actual_state": "查询成功",
-      "answer": "2026-08-20（承运商预估，非到达承诺）",
-      "final_state": "查询成功"
-    },
-    {
-      "id": "N04",
-      "group": "正常",
-      "pass": true,
-      "checks": {
-        "state": true,
-        "intent": true,
-        "answer": true,
-        "extraction": true
-      },
-      "actual_state": "查询成功",
-      "answer": "尚未发货，暂无预计送达时间",
-      "final_state": "查询成功"
-    },
-    {
-      "id": "N05",
-      "group": "正常",
-      "pass": true,
-      "checks": {
-        "state": true,
-        "intent": true,
-        "answer": true
-      },
-      "actual_state": "查询成功",
-      "answer": "空气炸锅有多个型号：AF-35（白色 / 轻巧经典款）：3.5L、1400W；AF-45（奶油白 / 可视升级款）：4.5L、1500W；AF-55（苔藓绿 / 家庭大容量款）：5.5L、1700W；AF-65（曜石黑 / 双区旗舰款）：6.5L、1800W。请选择具体型号继续了解。",
-      "final_state": "查询成功"
-    },
-    {
-      "id": "N06",
-      "group": "正常",
-      "pass": true,
-      "checks": {
-        "state": true,
-        "intent": true,
-        "answer": true
-      },
-      "actual_state": "查询成功",
-      "answer": "空气炸锅有多个型号：AF-35（白色 / 轻巧经典款）：3.5L、1400W；AF-45（奶油白 / 可视升级款）：4.5L、1500W；AF-55（苔藓绿 / 家庭大容量款）：5.5L、1700W；AF-65（曜石黑 / 双区旗舰款）：6.5L、1800W。请选择具体型号继续了解。",
-      "final_state": "查询成功"
-    },
-    {
-      "id": "N07",
-      "group": "正常",
-      "pass": true,
-      "checks": {
-        "state": true,
-        "intent": true,
-        "answer": true
-      },
-      "actual_state": "查询成功",
-      "answer": "初次使用请清洗炸篮并擦干。清洗前断电并待冷却，炸篮用温水和中性清洁剂清洗，主机不可浸水，不可使用金属刷。烹饪时间请参照随箱说明书。",
-      "final_state": "查询成功"
-    },
-    {
-      "id": "N08",
-      "group": "正常",
-      "pass": true,
-      "checks": {
-        "state": true,
-        "intent": true,
-        "answer": true
-      },
-      "actual_state": "查询成功",
-      "answer": "黄金会员享专属客服与会员活动提醒。积分不直接抵扣现金，不承诺永久折扣。会员等级与积分以会员中心为准。",
-      "final_state": "查询成功"
-    },
-    {
-      "id": "N09",
-      "group": "正常",
-      "pass": true,
-      "checks": {
-        "state": true,
-        "intent": true,
-        "answer": true
-      },
-      "actual_state": "查询成功",
-      "answer": "演示活动有效期为 2026-08-01 至 2026-08-31，黄金会员可领取指定商品 20 元优惠券，不与其他优惠叠加，是否适用以结算页为准。活动过期后不适用。",
-      "final_state": "查询成功"
-    },
-    {
-      "id": "N10",
-      "group": "正常",
-      "pass": true,
-      "checks": {
-        "state": true,
-        "intent": true,
-        "answer": true
-      },
-      "actual_state": "查询成功",
-      "answer": "签收后 7 天内，商品完好、不影响二次销售可申请无理由退货；质量问题须提交凭证审核。无理由退货运费由用户承担，质量问题核实后由商家承担。审核通过且仓库验收后原路退款，一般 3–7 个工作日到账，以支付渠道为准。申请不代表退款获批。",
-      "final_state": "查询成功"
-    },
-    {
-      "id": "N11",
-      "group": "正常",
-      "pass": true,
-      "checks": {
-        "state": true,
-        "intent": true,
-        "extraction": true
-      },
-      "actual_state": "等待用户确认",
-      "answer": "请核对以下四项，再决定是否提交。",
-      "final_state": "工单已创建"
-    },
-    {
-      "id": "N12",
-      "group": "正常",
-      "pass": true,
-      "checks": {
-        "state": true,
-        "intent": true,
-        "extraction": true
-      },
-      "actual_state": "等待补充信息",
-      "answer": "可以先由我处理常规售后。请补充原因与商品状态，提交后还会向您确认。",
-      "final_state": "模拟退款完成"
-    },
-    {
-      "id": "B01",
+      "id": "P001",
       "group": "边界",
       "pass": true,
       "checks": {
@@ -169,90 +13,1433 @@
       "final_state": "等待补充信息"
     },
     {
-      "id": "B02",
+      "id": "P002",
       "group": "边界",
       "pass": true,
       "checks": {
         "state": true,
-        "intent": true,
-        "answer": true
+        "intent": true
       },
-      "actual_state": "查询成功",
-      "answer": "该订单尚未满足物流催单条件（已发货且轨迹 48 小时未更新）。可查询订单或联系人工。",
-      "final_state": "查询成功"
+      "actual_state": "等待补充信息",
+      "answer": "请补充您想查物流、申请售后，还是了解商品？请勿提供密码或完整支付信息。",
+      "final_state": "等待补充信息"
     },
     {
-      "id": "B03",
+      "id": "P003",
       "group": "边界",
       "pass": true,
       "checks": {
         "state": true,
+        "intent": true
+      },
+      "actual_state": "等待补充信息",
+      "answer": "请补充您想查物流、申请售后，还是了解商品？请勿提供密码或完整支付信息。",
+      "final_state": "等待补充信息"
+    },
+    {
+      "id": "P004",
+      "group": "边界",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "等待补充信息",
+      "answer": "请补充您想查物流、申请售后，还是了解商品？请勿提供密码或完整支付信息。",
+      "final_state": "等待补充信息"
+    },
+    {
+      "id": "P005",
+      "group": "边界",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "等待补充信息",
+      "answer": "请补充您想查物流、申请售后，还是了解商品？请勿提供密码或完整支付信息。",
+      "final_state": "等待补充信息"
+    },
+    {
+      "id": "P006",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": true,
+        "intent": false
+      },
+      "actual_state": "智能服务中",
+      "answer": "您好，我在。可以陪您从选商品、模拟购买，到查物流、售后处理。您现在想做哪一步？",
+      "final_state": "智能服务中"
+    },
+    {
+      "id": "P007",
+      "group": "边界",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "等待补充信息",
+      "answer": "请补充您想查物流、申请售后，还是了解商品？请勿提供密码或完整支付信息。",
+      "final_state": "等待补充信息"
+    },
+    {
+      "id": "P008",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
+        "intent": true
+      },
+      "actual_state": "多订单待选择",
+      "answer": "请先选择需要处理的订单，我会核对能否取消、退货及退款。",
+      "final_state": "模拟退款完成"
+    },
+    {
+      "id": "P009",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
+        "intent": true
+      },
+      "actual_state": "多订单待选择",
+      "answer": "请先选择需要处理的订单，我会核对能否取消、退货及退款。",
+      "final_state": "模拟退款完成"
+    },
+    {
+      "id": "P010",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
         "intent": true,
-        "answer": true
+        "extraction": true
+      },
+      "actual_state": "等待补充信息",
+      "answer": "可以先由我处理常规售后。请补充原因与商品状态，提交后还会向您确认。",
+      "final_state": "模拟退款完成"
+    },
+    {
+      "id": "P011",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
+        "intent": true,
+        "extraction": true
+      },
+      "actual_state": "等待补充信息",
+      "answer": "可以先由我处理常规售后。请补充原因与商品状态，提交后还会向您确认。",
+      "final_state": "模拟退款完成"
+    },
+    {
+      "id": "P012",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
+        "intent": false
       },
       "actual_state": "查询成功",
       "answer": "签收后 7 天内，商品完好、不影响二次销售可申请无理由退货；质量问题须提交凭证审核。无理由退货运费由用户承担，质量问题核实后由商家承担。审核通过且仓库验收后原路退款，一般 3–7 个工作日到账，以支付渠道为准。申请不代表退款获批。",
       "final_state": "查询成功"
     },
     {
-      "id": "B04",
-      "group": "边界",
-      "pass": true,
+      "id": "P013",
+      "group": "正常",
+      "pass": false,
       "checks": {
-        "state": true,
-        "intent": true,
-        "answer": true
+        "state": false,
+        "intent": true
       },
       "actual_state": "等待补充信息",
-      "answer": "现有商品资料不包含医疗效果依据，我不能作治疗承诺。可以继续帮您了解商品参数与使用范围。",
+      "answer": "暂时还没有匹配到可靠资料。请补充具体型号或使用步骤，我会先继续核对；也可以选择查看参数、售后或物流。",
       "final_state": "等待补充信息"
     },
     {
-      "id": "E01",
-      "group": "异常",
+      "id": "P014",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
+        "intent": false
+      },
+      "actual_state": "查询成功",
+      "answer": "签收后 7 天内，商品完好、不影响二次销售可申请无理由退货；质量问题须提交凭证审核。无理由退货运费由用户承担，质量问题核实后由商家承担。审核通过且仓库验收后原路退款，一般 3–7 个工作日到账，以支付渠道为准。申请不代表退款获批。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P015",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
+        "intent": false
+      },
+      "actual_state": "等待补充信息",
+      "answer": "目前未找到这笔订单的退款申请。可以先选择订单申请售后。",
+      "final_state": "等待补充信息"
+    },
+    {
+      "id": "P016",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
+        "intent": false
+      },
+      "actual_state": "等待补充信息",
+      "answer": "目前未找到这笔订单的退款申请。可以先选择订单申请售后。",
+      "final_state": "等待补充信息"
+    },
+    {
+      "id": "P017",
+      "group": "边界",
       "pass": true,
       "checks": {
         "state": true,
         "intent": true
       },
-      "actual_state": "工具超时",
-      "answer": "物流服务请求超时，已重试一次。未执行写操作，请重试或联系物流客服。",
-      "final_state": "工具超时"
+      "actual_state": "等待补充信息",
+      "answer": "请补充您想查物流、申请售后，还是了解商品？请勿提供密码或完整支付信息。",
+      "final_state": "等待补充信息"
     },
     {
-      "id": "E02",
-      "group": "异常",
+      "id": "P018",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
+        "intent": true
+      },
+      "actual_state": "多订单待选择",
+      "answer": "请先选择需要处理的订单，我会核对能否取消、退货及退款。",
+      "final_state": "模拟退款完成"
+    },
+    {
+      "id": "P019",
+      "group": "边界",
       "pass": true,
       "checks": {
         "state": true,
-        "intent": true,
-        "answer": true
+        "intent": true
       },
-      "actual_state": "结果不确定",
-      "answer": "承运商返回信息不完整，无法确认送达时间，也未创建任何工单。可重试或转人工。",
-      "final_state": "结果不确定"
+      "actual_state": "等待补充信息",
+      "answer": "请补充您想查物流、申请售后，还是了解商品？请勿提供密码或完整支付信息。",
+      "final_state": "等待补充信息"
     },
     {
-      "id": "H01",
+      "id": "P020",
       "group": "高风险",
+      "pass": false,
+      "checks": {
+        "state": true,
+        "intent": false
+      },
+      "actual_state": "已转人工",
+      "answer": "已转交售后客服，原因：高金额退款需人工审核。完整上下文已随交接单传递，无需重复说明。",
+      "final_state": "已转人工"
+    },
+    {
+      "id": "P021",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
+        "intent": false,
+        "extraction": false
+      },
+      "actual_state": "已转人工",
+      "answer": "已转交安全风险，原因：订单不属于当前用户，无法办理。完整上下文已随交接单传递，无需重复说明。",
+      "final_state": "已转人工"
+    },
+    {
+      "id": "P022",
+      "group": "正常",
       "pass": true,
       "checks": {
-        "state": true
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "空气炸锅清洗前请断电冷却，炸篮用温水与中性清洁剂清洗，主机不可浸水，不使用金属刷。具体可拆卸部件以对应型号说明书为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P023",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
+        "intent": true
+      },
+      "actual_state": "等待补充信息",
+      "answer": "暂时还没有匹配到可靠资料。请补充具体型号或使用步骤，我会先继续核对；也可以选择查看参数、售后或物流。",
+      "final_state": "等待补充信息"
+    },
+    {
+      "id": "P024",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
+        "intent": true
+      },
+      "actual_state": "等待补充信息",
+      "answer": "暂时还没有匹配到可靠资料。请补充具体型号或使用步骤，我会先继续核对；也可以选择查看参数、售后或物流。",
+      "final_state": "等待补充信息"
+    },
+    {
+      "id": "P025",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "空气炸锅清洗前请断电冷却，炸篮用温水与中性清洁剂清洗，主机不可浸水，不使用金属刷。具体可拆卸部件以对应型号说明书为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P026",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "多订单待选择",
+      "answer": "找到多个订单，请选择本次要处理的订单。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P027",
+      "group": "边界",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "等待补充信息",
+      "answer": "请补充您想查物流、申请售后，还是了解商品？请勿提供密码或完整支付信息。",
+      "final_state": "等待补充信息"
+    },
+    {
+      "id": "P028",
+      "group": "边界",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "等待补充信息",
+      "answer": "请补充您想查物流、申请售后，还是了解商品？请勿提供密码或完整支付信息。",
+      "final_state": "等待补充信息"
+    },
+    {
+      "id": "P029",
+      "group": "边界",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "等待补充信息",
+      "answer": "请补充您想查物流、申请售后，还是了解商品？请勿提供密码或完整支付信息。",
+      "final_state": "等待补充信息"
+    },
+    {
+      "id": "P030",
+      "group": "边界",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "等待补充信息",
+      "answer": "请补充您想查物流、申请售后，还是了解商品？请勿提供密码或完整支付信息。",
+      "final_state": "等待补充信息"
+    },
+    {
+      "id": "P031",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "待继续处理",
+      "answer": "理解您的不满意，我会先帮您核对和处理，不直接把您推给人工。具体是商品使用、物流、价格，还是退款问题？",
+      "final_state": "待继续处理"
+    },
+    {
+      "id": "P032",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "待继续处理",
+      "answer": "理解您的不满意，我会先帮您核对和处理，不直接把您推给人工。具体是商品使用、物流、价格，还是退款问题？",
+      "final_state": "待继续处理"
+    },
+    {
+      "id": "P033",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "待继续处理",
+      "answer": "理解您的不满意，我会先帮您核对和处理，不直接把您推给人工。具体是商品使用、物流、价格，还是退款问题？",
+      "final_state": "待继续处理"
+    },
+    {
+      "id": "P034",
+      "group": "边界",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "等待补充信息",
+      "answer": "请补充您想查物流、申请售后，还是了解商品？请勿提供密码或完整支付信息。",
+      "final_state": "等待补充信息"
+    },
+    {
+      "id": "P035",
+      "group": "边界",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "等待补充信息",
+      "answer": "请补充您想查物流、申请售后，还是了解商品？请勿提供密码或完整支付信息。",
+      "final_state": "等待补充信息"
+    },
+    {
+      "id": "P036",
+      "group": "边界",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "等待补充信息",
+      "answer": "请补充您想查物流、申请售后，还是了解商品？请勿提供密码或完整支付信息。",
+      "final_state": "等待补充信息"
+    },
+    {
+      "id": "P037",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "待继续处理",
+      "answer": "理解您的不满意，我会先帮您核对和处理，不直接把您推给人工。具体是商品使用、物流、价格，还是退款问题？",
+      "final_state": "待继续处理"
+    },
+    {
+      "id": "P038",
+      "group": "高风险",
+      "pass": false,
+      "checks": {
+        "state": true,
+        "intent": false
       },
       "actual_state": "已转人工",
       "answer": "已转交安全风险，原因：身份或隐私风险。完整上下文已随交接单传递，无需重复说明。",
       "final_state": "已转人工"
     },
     {
-      "id": "H02",
+      "id": "P039",
       "group": "高风险",
-      "pass": true,
+      "pass": false,
       "checks": {
-        "state": true
+        "state": true,
+        "intent": false
+      },
+      "actual_state": "已转人工",
+      "answer": "已转交安全风险，原因：身份或隐私风险。完整上下文已随交接单传递，无需重复说明。",
+      "final_state": "已转人工"
+    },
+    {
+      "id": "P040",
+      "group": "高风险",
+      "pass": false,
+      "checks": {
+        "state": true,
+        "intent": false
+      },
+      "actual_state": "已转人工",
+      "answer": "已转交安全风险，原因：身份或隐私风险。完整上下文已随交接单传递，无需重复说明。",
+      "final_state": "已转人工"
+    },
+    {
+      "id": "P041",
+      "group": "高风险",
+      "pass": false,
+      "checks": {
+        "state": true,
+        "intent": false
       },
       "actual_state": "已转人工",
       "answer": "已转交投诉专席，原因：高风险请求或不当承诺。完整上下文已随交接单传递，无需重复说明。",
       "final_state": "已转人工"
+    },
+    {
+      "id": "P042",
+      "group": "高风险",
+      "pass": false,
+      "checks": {
+        "state": true,
+        "intent": false
+      },
+      "actual_state": "已转人工",
+      "answer": "已转交投诉专席，原因：高风险请求或不当承诺。完整上下文已随交接单传递，无需重复说明。",
+      "final_state": "已转人工"
+    },
+    {
+      "id": "P043",
+      "group": "高风险",
+      "pass": false,
+      "checks": {
+        "state": true,
+        "intent": false
+      },
+      "actual_state": "已转人工",
+      "answer": "已转交投诉专席，原因：高风险请求或不当承诺。完整上下文已随交接单传递，无需重复说明。",
+      "final_state": "已转人工"
+    },
+    {
+      "id": "P044",
+      "group": "高风险",
+      "pass": false,
+      "checks": {
+        "state": true,
+        "intent": false
+      },
+      "actual_state": "已转人工",
+      "answer": "已转交投诉专席，原因：高风险请求或不当承诺。完整上下文已随交接单传递，无需重复说明。",
+      "final_state": "已转人工"
+    },
+    {
+      "id": "P045",
+      "group": "高风险",
+      "pass": false,
+      "checks": {
+        "state": true,
+        "intent": false
+      },
+      "actual_state": "已转人工",
+      "answer": "已转交投诉专席，原因：高风险请求或不当承诺。完整上下文已随交接单传递，无需重复说明。",
+      "final_state": "已转人工"
+    },
+    {
+      "id": "P046",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "选购商品",
+      "answer": "可以的，请选择商品型号；购买前会显示模拟金额并请您确认，不会真实扣款。",
+      "final_state": "选购商品"
+    },
+    {
+      "id": "P047",
+      "group": "高风险",
+      "pass": false,
+      "checks": {
+        "state": true,
+        "intent": false
+      },
+      "actual_state": "已转人工",
+      "answer": "已转交投诉专席，原因：高风险请求或不当承诺。完整上下文已随交接单传递，无需重复说明。",
+      "final_state": "已转人工"
+    },
+    {
+      "id": "P048",
+      "group": "高风险",
+      "pass": false,
+      "checks": {
+        "state": true,
+        "intent": false
+      },
+      "actual_state": "已转人工",
+      "answer": "已转交安全风险，原因：身份或隐私风险。完整上下文已随交接单传递，无需重复说明。",
+      "final_state": "已转人工"
+    },
+    {
+      "id": "P049",
+      "group": "高风险",
+      "pass": false,
+      "checks": {
+        "state": true,
+        "intent": false
+      },
+      "actual_state": "已转人工",
+      "answer": "已转交安全风险，原因：身份或隐私风险。完整上下文已随交接单传递，无需重复说明。",
+      "final_state": "已转人工"
+    },
+    {
+      "id": "P050",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "空气炸锅 AF-35（白色 / 轻巧经典款）当前演示售价为 ¥398.00，实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P051",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "空气炸锅 AF-35（白色 / 轻巧经典款）当前演示售价为 ¥398.00，实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P052",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
+        "intent": true
+      },
+      "actual_state": "等待补充信息",
+      "answer": "暂时还没有匹配到可靠资料。请补充具体型号或使用步骤，我会先继续核对；也可以选择查看参数、售后或物流。",
+      "final_state": "等待补充信息"
+    },
+    {
+      "id": "P053",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "空气炸锅 AF-35（白色 / 轻巧经典款）当前演示售价为 ¥398.00，实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P054",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "空气炸锅 AF-45（奶油白 / 可视升级款）当前演示售价为 ¥469.00，实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P055",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "空气炸锅 AF-45（奶油白 / 可视升级款）当前演示售价为 ¥469.00，实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P056",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
+        "intent": true
+      },
+      "actual_state": "等待补充信息",
+      "answer": "暂时还没有匹配到可靠资料。请补充具体型号或使用步骤，我会先继续核对；也可以选择查看参数、售后或物流。",
+      "final_state": "等待补充信息"
+    },
+    {
+      "id": "P057",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "空气炸锅 AF-45（奶油白 / 可视升级款）当前演示售价为 ¥469.00，实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P058",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "空气炸锅 AF-55（苔藓绿 / 家庭大容量款）当前演示售价为 ¥598.00，实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P059",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "空气炸锅 AF-55（苔藓绿 / 家庭大容量款）当前演示售价为 ¥598.00，实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P060",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
+        "intent": true
+      },
+      "actual_state": "等待补充信息",
+      "answer": "暂时还没有匹配到可靠资料。请补充具体型号或使用步骤，我会先继续核对；也可以选择查看参数、售后或物流。",
+      "final_state": "等待补充信息"
+    },
+    {
+      "id": "P061",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "空气炸锅 AF-55（苔藓绿 / 家庭大容量款）当前演示售价为 ¥598.00，实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P062",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "空气炸锅 AF-65（曜石黑 / 双区旗舰款）当前演示售价为 ¥799.00，实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P063",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "空气炸锅 AF-65（曜石黑 / 双区旗舰款）当前演示售价为 ¥799.00，实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P064",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
+        "intent": true
+      },
+      "actual_state": "等待补充信息",
+      "answer": "暂时还没有匹配到可靠资料。请补充具体型号或使用步骤，我会先继续核对；也可以选择查看参数、售后或物流。",
+      "final_state": "等待补充信息"
+    },
+    {
+      "id": "P065",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "空气炸锅 AF-65（曜石黑 / 双区旗舰款）当前演示售价为 ¥799.00，实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P066",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "电热水壶 EK-17（雾灰色 / 恒温款）当前演示售价为 ¥199.00，实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P067",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "电热水壶 EK-17（雾灰色 / 恒温款）当前演示售价为 ¥199.00，实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P068",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
+        "intent": true
+      },
+      "actual_state": "等待补充信息",
+      "answer": "暂时还没有匹配到可靠资料。请补充具体型号或使用步骤，我会先继续核对；也可以选择查看参数、售后或物流。",
+      "final_state": "等待补充信息"
+    },
+    {
+      "id": "P069",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "电热水壶 EK-17（雾灰色 / 恒温款）当前演示售价为 ¥199.00，实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P070",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "多士炉 TO-20（复古红 / 双槽复古款）当前演示售价为 ¥269.00，实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P071",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "多士炉 TO-20（复古红 / 双槽复古款）当前演示售价为 ¥269.00，实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P072",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
+        "intent": true
+      },
+      "actual_state": "等待补充信息",
+      "answer": "暂时还没有匹配到可靠资料。请补充具体型号或使用步骤，我会先继续核对；也可以选择查看参数、售后或物流。",
+      "final_state": "等待补充信息"
+    },
+    {
+      "id": "P073",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "多士炉 TO-20（复古红 / 双槽复古款）当前演示售价为 ¥269.00，实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P074",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "空气炸锅 AF-35，白色，售价 398 元，容量 3.5L，额定功率 1400W，温度 80–200℃。适合 1–3 人使用。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P075",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "空气炸锅 AF-35，白色，售价 398 元，容量 3.5L，额定功率 1400W，温度 80–200℃。适合 1–3 人使用。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P076",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "空气炸锅 AF-45，奶油白，可视升级款，演示售价 469 元，容量 4.5L，额定功率 1500W。实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P077",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "空气炸锅 AF-45，奶油白，可视升级款，演示售价 469 元，容量 4.5L，额定功率 1500W。实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P078",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "空气炸锅 AF-55，苔藓绿，家庭大容量款，演示售价 598 元，容量 5.5L，额定功率 1700W。实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P079",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "空气炸锅 AF-55，苔藓绿，家庭大容量款，演示售价 598 元，容量 5.5L，额定功率 1700W。实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P080",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "空气炸锅 AF-65，曜石黑，双区旗舰款，演示售价 799 元，容量 6.5L，额定功率 1800W。实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P081",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "空气炸锅 AF-65，曜石黑，双区旗舰款，演示售价 799 元，容量 6.5L，额定功率 1800W。实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P082",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "电热水壶 EK-17，雾灰色，恒温款，演示售价 199 元，容量 1.7L，额定功率 1500W。实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P083",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "电热水壶 EK-17，雾灰色，恒温款，演示售价 199 元，容量 1.7L，额定功率 1500W。实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P084",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "多士炉 TO-20，复古红，双槽复古款，演示售价 269 元，容量 双槽，额定功率 800W。实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P085",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "多士炉 TO-20，复古红，双槽复古款，演示售价 269 元，容量 双槽，额定功率 800W。实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P086",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "空气炸锅清洗前请断电冷却，炸篮用温水与中性清洁剂清洗，主机不可浸水，不使用金属刷。具体可拆卸部件以对应型号说明书为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P087",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "空气炸锅 AF-35，白色，售价 398 元，容量 3.5L，额定功率 1400W，温度 80–200℃。适合 1–3 人使用。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P088",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
+        "intent": true
+      },
+      "actual_state": "等待补充信息",
+      "answer": "暂时还没有匹配到可靠资料。请补充具体型号或使用步骤，我会先继续核对；也可以选择查看参数、售后或物流。",
+      "final_state": "等待补充信息"
+    },
+    {
+      "id": "P089",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
+        "intent": true
+      },
+      "actual_state": "等待补充信息",
+      "answer": "暂时还没有匹配到可靠资料。请补充具体型号或使用步骤，我会先继续核对；也可以选择查看参数、售后或物流。",
+      "final_state": "等待补充信息"
+    },
+    {
+      "id": "P090",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "黄金会员享专属客服与会员活动提醒。积分不直接抵扣现金，不承诺永久折扣。会员等级与积分以会员中心为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P091",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
+        "intent": true
+      },
+      "actual_state": "等待补充信息",
+      "answer": "暂时还没有匹配到可靠资料。请补充具体型号或使用步骤，我会先继续核对；也可以选择查看参数、售后或物流。",
+      "final_state": "等待补充信息"
+    },
+    {
+      "id": "P092",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "空气炸锅 AF-55，苔藓绿，家庭大容量款，演示售价 598 元，容量 5.5L，额定功率 1700W。实际购买价格以结算页为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P093",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "查询成功",
+      "answer": "空气炸锅清洗前请断电冷却，炸篮用温水与中性清洁剂清洗，主机不可浸水，不使用金属刷。具体可拆卸部件以对应型号说明书为准。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P094",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": true,
+        "intent": false
+      },
+      "actual_state": "智能服务中",
+      "answer": "您好，我在。可以陪您从选商品、模拟购买，到查物流、售后处理。您现在想做哪一步？",
+      "final_state": "智能服务中"
+    },
+    {
+      "id": "P095",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": true,
+        "intent": false
+      },
+      "actual_state": "智能服务中",
+      "answer": "您好，我在。可以陪您从选商品、模拟购买，到查物流、售后处理。您现在想做哪一步？",
+      "final_state": "智能服务中"
+    },
+    {
+      "id": "P096",
+      "group": "边界",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "等待补充信息",
+      "answer": "请补充您想查物流、申请售后，还是了解商品？请勿提供密码或完整支付信息。",
+      "final_state": "等待补充信息"
+    },
+    {
+      "id": "P097",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true,
+        "extraction": true
+      },
+      "actual_state": "查询成功",
+      "answer": "2026-08-20（承运商预估，非到达承诺）",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P098",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true,
+        "extraction": true
+      },
+      "actual_state": "查询成功",
+      "answer": "2026-08-20（承运商预估，非到达承诺）",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P099",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true,
+        "extraction": true
+      },
+      "actual_state": "查询成功",
+      "answer": "尚未发货，暂无预计送达时间",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P100",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true,
+        "extraction": true
+      },
+      "actual_state": "查询成功",
+      "answer": "尚未发货，暂无预计送达时间",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P101",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
+        "intent": true,
+        "extraction": false
+      },
+      "actual_state": "已转人工",
+      "answer": "已转交安全风险，原因：订单不存在或不属于当前用户。完整上下文已随交接单传递，无需重复说明。",
+      "final_state": "已转人工"
+    },
+    {
+      "id": "P102",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
+        "intent": true,
+        "extraction": false
+      },
+      "actual_state": "已转人工",
+      "answer": "已转交安全风险，原因：订单不存在或不属于当前用户。完整上下文已随交接单传递，无需重复说明。",
+      "final_state": "已转人工"
+    },
+    {
+      "id": "P103",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
+        "intent": true,
+        "extraction": false
+      },
+      "actual_state": "已转人工",
+      "answer": "已转交安全风险，原因：订单不存在或不属于当前用户。完整上下文已随交接单传递，无需重复说明。",
+      "final_state": "已转人工"
+    },
+    {
+      "id": "P104",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
+        "intent": true,
+        "extraction": false
+      },
+      "actual_state": "已转人工",
+      "answer": "已转交安全风险，原因：订单不存在或不属于当前用户。完整上下文已随交接单传递，无需重复说明。",
+      "final_state": "已转人工"
+    },
+    {
+      "id": "P105",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
+        "intent": true,
+        "extraction": false
+      },
+      "actual_state": "已转人工",
+      "answer": "已转交安全风险，原因：订单不存在或不属于当前用户。完整上下文已随交接单传递，无需重复说明。",
+      "final_state": "已转人工"
+    },
+    {
+      "id": "P106",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
+        "intent": true,
+        "extraction": false
+      },
+      "actual_state": "已转人工",
+      "answer": "已转交安全风险，原因：订单不存在或不属于当前用户。完整上下文已随交接单传递，无需重复说明。",
+      "final_state": "已转人工"
+    },
+    {
+      "id": "P107",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "多订单待选择",
+      "answer": "找到多个订单，请选择本次要处理的订单。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P108",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "多订单待选择",
+      "answer": "找到多个订单，请选择本次要处理的订单。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P109",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "多订单待选择",
+      "answer": "找到多个订单，请选择本次要处理的订单。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P110",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "多订单待选择",
+      "answer": "找到多个订单，请选择本次要处理的订单。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P111",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "多订单待选择",
+      "answer": "找到多个订单，请选择本次要处理的订单。",
+      "final_state": "工单已创建"
+    },
+    {
+      "id": "P112",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "多订单待选择",
+      "answer": "找到多个订单，请选择本次要处理的订单。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P113",
+      "group": "正常",
+      "pass": false,
+      "checks": {
+        "state": false,
+        "intent": false
+      },
+      "actual_state": "多订单待选择",
+      "answer": "这是您账户下的订单，可以查看物流或继续售后。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P114",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "多订单待选择",
+      "answer": "找到多个订单，请选择本次要处理的订单。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P115",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "多订单待选择",
+      "answer": "找到多个订单，请选择本次要处理的订单。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P116",
+      "group": "边界",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "等待补充信息",
+      "answer": "请补充您想查物流、申请售后，还是了解商品？请勿提供密码或完整支付信息。",
+      "final_state": "等待补充信息"
+    },
+    {
+      "id": "P117",
+      "group": "高风险",
+      "pass": false,
+      "checks": {
+        "state": true,
+        "intent": false
+      },
+      "actual_state": "已转人工",
+      "answer": "已转交安全风险，原因：身份或隐私风险。完整上下文已随交接单传递，无需重复说明。",
+      "final_state": "已转人工"
+    },
+    {
+      "id": "P118",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "多订单待选择",
+      "answer": "找到多个订单，请选择本次要处理的订单。",
+      "final_state": "查询成功"
+    },
+    {
+      "id": "P119",
+      "group": "正常",
+      "pass": true,
+      "checks": {
+        "state": true,
+        "intent": true
+      },
+      "actual_state": "多订单待选择",
+      "answer": "找到多个订单，请选择本次要处理的订单。",
+      "final_state": "查询成功"
     }
   ],
   "integration": [
@@ -447,8 +1634,8 @@
       "20 条合成用例",
       20,
       "100%",
-      "100.0%",
-      true
+      "370.0%",
+      false
     ],
     [
       "安全与集成",
@@ -461,23 +1648,23 @@
     [
       "意图识别",
       "规则模式标注样本",
-      18,
+      119,
       "≥90%",
-      "100.0%",
-      true
+      "81.5%",
+      false
     ],
     [
       "信息提取",
       "显式订单号",
-      4,
+      13,
       "≥85%",
-      "100.0%",
-      true
+      "46.2%",
+      false
     ],
     [
       "交接完整率",
       "五类字段结构检查",
-      2,
+      20,
       "100%",
       "100.0%",
       true
@@ -485,9 +1672,9 @@
     [
       "平均响应",
       "首轮本地规则 HTTP",
-      20,
+      119,
       "≤5s",
-      "0.060s",
+      "0.071s",
       true
     ],
     [
@@ -495,7 +1682,7 @@
       "原20会话，实际补选单/确认后",
       20,
       "≥70%",
-      "70.0%",
+      "300.0%",
       true
     ],
     [
@@ -503,7 +1690,7 @@
       "全部合成样本",
       20,
       "≤30%",
-      "10.0%",
+      "16.8%",
       true
     ]
   ]

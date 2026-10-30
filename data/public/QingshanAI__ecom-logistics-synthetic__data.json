@@ -1,0 +1,186 @@
+[
+  {
+    "scene": "物流查询",
+    "user": "S20260817001 查物流",
+    "bot": "正在为您查询订单 S20260817001 的物流信息...",
+    "tone": "专业",
+    "id": "SENYU-0048",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "物流查询",
+    "user": "我查下S20260817001订单号到哪了",
+    "bot": "您的订单 S20260817001 最新状态：卡在转运中心",
+    "tone": "专业",
+    "id": "SENYU-0049",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "物流查询",
+    "user": "S20260818002 查物流",
+    "bot": "正在为您查询订单 S20260818002 的物流信息...",
+    "tone": "专业",
+    "id": "SENYU-0050",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "物流查询",
+    "user": "我查下S20260818002订单号到哪了",
+    "bot": "您的订单 S20260818002 最新状态：运输中",
+    "tone": "专业",
+    "id": "SENYU-0051",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "物流查询",
+    "user": "S20260816003 查物流",
+    "bot": "正在为您查询订单 S20260816003 的物流信息...",
+    "tone": "专业",
+    "id": "SENYU-0052",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "物流查询",
+    "user": "我查下S20260816003订单号到哪了",
+    "bot": "您的订单 S20260816003 最新状态：运输中",
+    "tone": "专业",
+    "id": "SENYU-0053",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "物流查询",
+    "user": "S20260819004 查物流",
+    "bot": "正在为您查询订单 S20260819004 的物流信息...",
+    "tone": "专业",
+    "id": "SENYU-0054",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "物流查询",
+    "user": "我查下S20260819004订单号到哪了",
+    "bot": "您的订单 S20260819004 最新状态：卡在转运中心",
+    "tone": "专业",
+    "id": "SENYU-0055",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "物流查询",
+    "user": "S20260817005 查物流",
+    "bot": "正在为您查询订单 S20260817005 的物流信息...",
+    "tone": "专业",
+    "id": "SENYU-0056",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "物流查询",
+    "user": "我查下S20260817005订单号到哪了",
+    "bot": "您的订单 S20260817005 最新状态：派送中",
+    "tone": "专业",
+    "id": "SENYU-0057",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "物流查询",
+    "user": "我的包裹到哪了",
+    "bot": "请提供一下订单号哦，或者告诉我买的什么商品，我帮您查~",
+    "tone": "协助",
+    "id": "SENYU-0058",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "物流查询",
+    "user": "快递什么时候到",
+    "bot": "您方便提供一下订单号吗？我才能帮您核实物流进度~",
+    "tone": "协助",
+    "id": "SENYU-0059",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "物流查询",
+    "user": "你们家发货了吗",
+    "bot": "请提供一下订单号，我帮您查询当前发货状态~",
+    "tone": "协助",
+    "id": "SENYU-0060",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "物流查询",
+    "user": "我那个空气炸锅到哪了",
+    "bot": "请问您的订单号是多少？或者告诉我下单时间，我帮您查~",
+    "tone": "协助",
+    "id": "SENYU-0061",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "物流查询",
+    "user": "快递48小时没更新了帮我催下",
+    "bot": "好的，我这边帮您提交物流催单，预计24小时内有反馈，请您留意~",
+    "tone": "安抚",
+    "id": "SENYU-0062",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "物流查询",
+    "user": "这个快递怎么卡在杭州了两天没动",
+    "bot": "非常抱歉给您带来不便！我马上帮您提交催单核查，预计24小时内反馈~",
+    "tone": "致歉",
+    "id": "SENYU-0063",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "物流查询",
+    "user": "我的订单怎么发货这么慢",
+    "bot": "非常抱歉！您方便提供一下订单号吗？我帮您看看是还没发货还是已经发出~",
+    "tone": "致歉",
+    "id": "SENYU-0064",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "物流查询",
+    "user": "我这个订单还没发货呢",
+    "bot": "实在抱歉让您久等了！我帮您加急安排，今天之内一定发出，您看好吗？",
+    "tone": "致歉",
+    "id": "SENYU-0065",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "物流查询",
+    "user": "不是说48小时内发货吗",
+    "bot": "非常抱歉！我马上帮您核实一下情况，给您一个交代~",
+    "tone": "致歉",
+    "id": "SENYU-0066",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "物流查询",
+    "user": "我可以改下收货地址吗",
+    "bot": "请问包裹已经发出了吗？如果还没发货我可以帮您改；如果已经发出，需要联系快递处理~",
+    "tone": "协助",
+    "id": "SENYU-0067",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "物流查询",
+    "user": "收件人手机号写错了",
+    "bot": "您方便提供一下正确的手机号吗？我帮您联系快递修改~",
+    "tone": "协助",
+    "id": "SENYU-0068",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "物流查询",
+    "user": "快递显示签收但我没收到啊",
+    "bot": "非常抱歉！您方便说一下收货地址吗？我帮您联系快递员核实~",
+    "tone": "致歉",
+    "id": "SENYU-0069",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "物流查询",
+    "user": "快递被退回了什么情况",
+    "bot": "您的订单快递已退回，通常是收件人地址或联系方式无法送达。我帮您重新安排发出可以吗？",
+    "tone": "安抚",
+    "id": "SENYU-0070",
+    "source": "senyu-generate-v1"
+  }
+]

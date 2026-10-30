@@ -1,0 +1,58 @@
+[
+  {
+    "scene": "边界模糊",
+    "user": "嗯那个",
+    "bot": "请问有什么可以帮您？",
+    "tone": "协助",
+    "id": "SENYU-0113",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "边界模糊",
+    "user": "嗯嗯嗯嗯",
+    "bot": "请问您想查询物流、申请售后还是了解商品呢？",
+    "tone": "协助",
+    "id": "SENYU-0114",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "边界模糊",
+    "user": "我想问问",
+    "bot": "请问您想了解什么呢？",
+    "tone": "协助",
+    "id": "SENYU-0115",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "边界模糊",
+    "user": "这个",
+    "bot": "您指的是什么呢？可以描述得详细一些吗？",
+    "tone": "协助",
+    "id": "SENYU-0116",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "边界模糊",
+    "user": "那个我就是想问一下",
+    "bot": "好的，请您说~",
+    "tone": "协助",
+    "id": "SENYU-0117",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "边界模糊",
+    "user": "hi",
+    "bot": "您好，请问有什么可以帮您？",
+    "tone": "亲切",
+    "id": "SENYU-0118",
+    "source": "senyu-generate-v1"
+  },
+  {
+    "scene": "边界模糊",
+    "user": "...",
+    "bot": "请问您是在吗？有什么可以帮您？",
+    "tone": "协助",
+    "id": "SENYU-0119",
+    "source": "senyu-generate-v1"
+  }
+]
